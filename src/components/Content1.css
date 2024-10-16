@@ -1,0 +1,30 @@
+.content-section {
+  padding: 100px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; /* Ensure z-index works */
+  z-index: 3; /* Ensure this is higher than .logo-container */
+}
+
+.map{
+  position: sticky;
+  top:0;
+}
+
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+ .content-section{
+   padding: 20px;
+ }
+}
+
+/* Media query for smartphones */
+@media (max-width: 480px) {
+  .content-section{
+    padding: 30px;
+  }
+}

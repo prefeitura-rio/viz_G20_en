@@ -1,13 +1,19 @@
 import React from 'react';
 import './App.css';
-import Scrollytelling from './Scrollytelling';
-import Content1 from './Content1';
+import Intro from './components/Intro';
+import Content1 from './components/Content1';
+import Quiz from './components/Quiz';
+import Conclusao from './components/Conclusao';
+import Creditos from './components/Creditos';
 
 function App() {
   return (
     <div className="App">
-      <Scrollytelling />
+      <Intro />
       <Content1 />
+      <Quiz />
+      <Conclusao />
+      <Creditos />
     </div>
   );
 }

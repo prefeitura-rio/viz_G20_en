@@ -1,0 +1,29 @@
+.conclusao-container{
+  background-color: white;
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  padding: 100px;
+
+}
+
+.conclusao{
+  max-width: 45rem;
+
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  .conclusao-container{
+    padding: 30px;
+  }
+ }
+ 
+ /* Media query for smartphones */
+ @media (max-width: 480px) {
+   .conclusao-container{
+     padding: 25px;
+   }
+ }
+ 
