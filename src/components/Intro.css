@@ -14,7 +14,7 @@
 }
 
 .logo {
-  width: 100px; /* Adjust size as needed */
+  width: 150px; /* Adjust size as needed */
   height: auto;
 }
 
@@ -73,7 +73,7 @@
   text-align: center;
   color: white;
   display:flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .text-card-intro3 h1 {
@@ -93,7 +93,7 @@
   line-height: 1.5;
 }
 .desenvolvido-por {
-  font-size: 1.2rem; 
+  font-size: 1rem !important; 
   padding-bottom:50vh;
   max-width: 45rem;
 }

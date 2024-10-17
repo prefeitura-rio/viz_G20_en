@@ -32,9 +32,7 @@
   font-family: "Libre Baskerville", serif;
   max-width: 35rem;
   padding: 30px;
-  background-color: rgba(255, 255, 255, 0.5); /* Translucent background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Elevation */
-  /* border-radius: 20px; */
+  
 }
 
 /* Media query for tablets */

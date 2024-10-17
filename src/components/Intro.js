@@ -95,16 +95,19 @@ const Intro = (props) => {
             <h1>G20 EM DADOS</h1>
             <h2>Veja como o evento dá destaque geopolítico ao Rio, envolve a cidade e impacta sua economia</h2>
           </div>
-          <span className="desenvolvido-por">
-            Desenvolvido pela Equipe de Visualização de Dados do
+          <br></br>
+          <br></br>
+          <br></br>
+          {/* <span className="desenvolvido-por">
+            Desenvolvido pelo {" "}
             <a
               className="sem-estilo-link"
               href="https://www.dados.rio/"
               target="_blank"
               rel="noreferrer">
-              {" "}Escritório de Dados
+              {""}Escritório de Dados
             </a> da Prefeitura da Cidade do Rio de Janeiro
-          </span>
+          </span> */}
         </div>
       </div>
     </div>

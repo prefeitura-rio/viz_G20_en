@@ -1,20 +1,25 @@
 .bignumbers-container {
   font-family: "Libre Baskerville", serif;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
   padding: 2rem;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  
   margin: 0 auto;
-  background-color: white;
+  background-color: #ffffff;
   min-height: 100vh;
+  max-width: 1245px;
+}
+.container2{
+  min-width: 100%;
+  background-color: #ffffff;
 }
 
 .prefix {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  padding-right:5rem;
+  /* justify-content: center; */
 }	
 .stat-item {
   text-align: center;
@@ -23,30 +28,68 @@
 }
 
 .stat-value {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: bold;
 }
 
 .stat-unit {
   margin: auto 0;
   padding-right: 5px;
-  font-size: 1.5rem;
+  font-size: 5rem;
   margin-left: 0.25rem;
+  font-weight: bold;
 }
 
 .stat-text {
   font-size: 1rem;
   color: #666;
   margin-top: 0.5rem;
+  text-align: left;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  
+  .bignumbers-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+    
+    gap: 0rem;
+  }
   .stat-value {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+  .stat-unit {
+    margin: auto 0;
+    padding-right: 5px;
+    font-size: 2rem;
+    margin-left: 0.25rem;
+    font-weight: bold;
+  }
+  .stat-item {
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    padding: 0.5rem 0;
+  }
+}
+@media (max-width: 1200px) and (min-width: 430px) {
+  .stat-value {
+    font-size: 2rem;
   }
   .bignumbers-container {
-    gap: 0rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .stat-unit {
+    margin: auto 0;
+    padding-right: 5px;
+    font-size: 2rem;
+    margin-left: 0.25rem;
+    font-weight: bold;
+  }
+  .stat-item {
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    padding: 0.5rem 0;
   }
 
 }
