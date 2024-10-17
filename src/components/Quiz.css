@@ -1,13 +1,24 @@
 .quiz-container {
-  /* padding-bottom: -10rem; */
+  padding-top:20px;
   background-color: white;
   z-index: 4 !important;
-  /* width: 100%;
-  height: 100%;
-  margin: 50px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
+  
+}
+
+.quiz-intro {
+  margin:10px auto;
+  font-family: "Libre Baskerville", serif;
+  max-width: 35rem;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 1); /* Translucent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Elevation */
+  position: relative;
+
+  color: #717171;
+ 
+  line-height: 1.15;
+  text-align: justify;
+  line-height: 1.5;
 }
 .flourish-credit{
   display: none;

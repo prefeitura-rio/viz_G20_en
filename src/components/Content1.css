@@ -14,6 +14,28 @@
   top:0;
 }
 
+.text-card-map-intro {
+  margin-bottom:50px;
+  position: relative;
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #717171;
+  font-size: 0.6em;
+  line-height: 1.15;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.box-map-intro {
+  font-family: "Libre Baskerville", serif;
+  max-width: 35rem;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.5); /* Translucent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Elevation */
+  /* border-radius: 20px; */
+}
 
 /* Media query for tablets */
 @media (max-width: 768px) {

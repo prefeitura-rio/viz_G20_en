@@ -9,18 +9,19 @@ const Creditos = () => {
         <h2>Autores</h2>
         <ul>
           <br></br>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
+          <li>Mateus Lana</li>
+          <li>Caio Jacintho</li>
+          <li>Lucas Tavares</li>
+          <li>Pedro Meneghel</li>
+          <li>Vanessa Leme</li>
         </ul>
       </div>
       <div className="section">
-        <h2>Comissão do G20</h2>
+        <h2>Agradecimentos</h2>
         <ul>
           <br></br>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
+          <li>Lucas Padilha</li>
+          <li>João Carabetta</li>
         </ul>
       </div>
       <div className="section">

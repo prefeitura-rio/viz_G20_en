@@ -31,22 +31,21 @@
 .box {
   max-width: 35rem;
   padding: 30px;
-  background-color: rgba(255, 255, 255, 0.8); /* Translucent background */
+  background-color: rgba(255, 255, 255, 1); /* Translucent background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Elevation */
-  border-radius: 20px;
 }
 
 /* Media query for tablets */
 @media (max-width: 768px) {
   .box{
-  padding: 15px;
+  padding: 20px;
   }
 }
 
 /* Media query for smartphones */
 @media (max-width: 480px) {
   .box{
-   padding: 15px;
+   padding: 30px;
   }
 
 }
