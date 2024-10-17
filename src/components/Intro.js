@@ -56,6 +56,7 @@ const Intro = (props) => {
     'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/2.mp4',
     'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/1.mp4',
     'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/3.mp4',
+    'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/4.mp4',
   ];
 
   return (
@@ -84,9 +85,12 @@ const Intro = (props) => {
           <h2>Quem decide o futuro do mundo?</h2>
         </div>
         <div className="text-card-intro" ref={(el) => (textRefs.current[1] = el)}>
-          <h2>As escolhas feitas pelos líderes globais hoje moldarão a face da Terra nas próximas décadas. Em 2024, o Rio de Janeiro é a sede de um dos maiores encontros entre nações: a Cúpula do G20. </h2>
+          <h2>As escolhas feitas pelos líderes globais hoje moldarão a face da Terra nas próximas décadas.  </h2>
         </div>
-        <div className="text-card-intro3" ref={(el) => (textRefs.current[2] = el)}>
+        <div className="text-card-intro" ref={(el) => (textRefs.current[2] = el)}>
+          <h2>Em 2024, o Rio de Janeiro é a sede de um dos maiores encontros entre nações: a Cúpula do G20.  </h2>
+        </div>
+        <div className="text-card-intro3" ref={(el) => (textRefs.current[3] = el)}>
           <div>
             <h1>G20 EM DADOS</h1>
             <h2>Veja como o evento dá destaque geopolítico ao Rio, envolve a cidade e impacta sua economia</h2>
