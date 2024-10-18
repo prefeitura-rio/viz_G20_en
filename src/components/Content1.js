@@ -1,7 +1,8 @@
 import React from 'react';
 import './Content1.css';
 import MapComponent from './MapComponent';
-import Map from '../assets/mapa.png';
+// import Map from '../assets/mapa.png';
+import SvgMap from './SvgMap';
 
 const Content1 = ({ id }) => {
   return (
@@ -19,7 +20,7 @@ const Content1 = ({ id }) => {
           </h2>
         </div>
       </div>
-      <img src={Map} alt="Mapa" className="map" />
+      <SvgMap />
       <MapComponent />
     </div>
   );
