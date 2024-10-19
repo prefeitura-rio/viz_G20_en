@@ -1,102 +1,101 @@
-import React, { useEffect, useRef } from 'react';
-import * as echarts from 'echarts';
-import worldJson from './world.json'; // Adjust the path as necessary
+import React, { useEffect, useState } from 'react';
+import * as d3 from 'd3';
+import * as topojson from 'topojson-client';
+import "./SvgMap.css"
+
+const data = [
+  { name: 'South Africa' },
+  { name: 'Germany' },
+  { name: 'Saudi Arabia' },
+  { name: 'Argentina' },
+  { name: 'Australia' },
+  { name: 'Brazil' },
+  { name: 'Canada' },
+  { name: 'China' },
+  { name: 'South Korea' },
+  { name: 'United States of America' },
+  { name: 'France' },
+  { name: 'India' },
+  { name: 'Indonesia' },
+  { name: 'Italy' },
+  { name: 'Japan' },
+  { name: 'Mexico' },
+  { name: 'United Kingdom' },
+  { name: 'Russia' },
+  { name: 'Turkey' },
+];
 
 const SvgMap = () => {
-  const chartRef = useRef(null);
+  const [correctCountries, setCorrectCountries] = useState([]);
 
   useEffect(() => {
-    const chartDom = chartRef.current;
-    const myChart = echarts.init(chartDom);
-    let option;
+    const svg = d3.select('#world-map')
+      .attr('viewBox', '0 0 960 500')
+      .attr('preserveAspectRatio', 'xMidYMid meet');
 
-    myChart.showLoading();
-    myChart.hideLoading();
-    echarts.registerMap('WorldMap', worldJson, {
+    const projection = d3.geoMercator()
+      .scale(150)
+      .translate([480, 250]);
 
+    const path = d3.geoPath().projection(projection);
+
+    const tooltip = d3.select('body').append('div')
+      .attr('class', 'tooltip')
+      .style('position', 'absolute')
+      .style('background', '#fff')
+      .style('padding', '5px')
+      .style('border', '1px solid #ccc')
+      .style('border-radius', '5px')
+      .style('pointer-events', 'none')
+      .style('opacity', 0);
+
+    d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(worldData => {
+      const countries = topojson.feature(worldData, worldData.objects.countries).features;
+
+      svg.selectAll('path')
+        .data(countries)
+        .enter().append('path')
+        .attr('d', path)
+        .attr('class', 'country')
+        .attr('fill', '#ccc')
+        .attr('stroke', 'black')
+        .attr('stroke-width', 0.5)
+        .on('click', function (event, d) {
+          const countryName = d.properties.name;
+          if (data.some(country => country.name === countryName)) {
+            d3.select(this).attr('fill', 'blue');
+            setCorrectCountries(prev => [...new Set([...prev, countryName])]);
+          } else {
+            d3.select(this).attr('fill', 'red');
+            setTimeout(() => d3.select(this).attr('fill', '#ccc'), 500);
+          }
+        })
+        .on('mouseover', function (event, d) {
+          tooltip.transition().duration(200).style('opacity', .9);
+          tooltip.html(d.properties.name)
+            .style('left', (event.pageX + 5) + 'px')
+            .style('top', (event.pageY - 28) + 'px');
+        })
+        .on('mouseout', function () {
+          tooltip.transition().duration(500).style('opacity', 0);
+        });
     });
 
-    const data = [
-      { name: 'South Africa', value: 4822023 },
-      { name: 'Germany', value: 731449 },
-      { name: 'Saudi Arabia', value: 6553255 },
-      { name: 'Argentina', value: 2949131 },
-      { name: 'Australia', value: 38041430 },
-      { name: 'Brazil', value: 5187582 },
-      { name: 'Canada', value: 3590347 },
-      { name: 'China', value: 917092 },
-      { name: 'South Korea', value: 632323 },
-      { name: 'United States', value: 19317568 },
-      { name: 'France', value: 9919945 },
-      { name: 'India', value: 1392313 },
-      { name: 'Indonesia', value: 1595728 },
-      { name: 'Italy', value: 12875255 },
-      { name: 'Japan', value: 6537334 },
-      { name: 'Mexico', value: 3074186 },
-      { name: 'United Kingdom', value: 2885905 },
-      { name: 'Russia', value: 4380415 },
-      { name: 'Turkey', value: 4601893 },
-    ];
-
-    data.sort((a, b) => a.value - b.value);
-
-    const mapOption = {
-      visualMap: {
-        left: 'right',
-        min: 500000,
-        max: 38000000,
-        inRange: {
-          color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026']
-        },
-        text: ['High', 'Low'],
-        calculable: true
-      },
-      series: [
-        {
-          id: 'population',
-          type: 'map',
-          roam: true,
-          map: 'WorldMap',
-          animationDurationUpdate: 1000,
-          universalTransition: true,
-          data: data
-        }
-      ]
-    };
-
-    const barOption = {
-      xAxis: {
-        type: 'value'
-      },
-      yAxis: {
-        type: 'category',
-        axisLabel: {
-          rotate: 30
-        },
-        data: data.map(item => item.name)
-      },
-      animationDurationUpdate: 1000,
-      series: {
-        type: 'bar',
-        id: 'population',
-        data: data.map(item => item.value),
-        universalTransition: true
-      }
-    };
-
-    let currentOption = mapOption;
-    myChart.setOption(mapOption);
-    setInterval(() => {
-      currentOption = currentOption === mapOption ? barOption : mapOption;
-      myChart.setOption(currentOption, true);
-    }, 2000);
-
-    option && myChart.setOption(option);
   }, []);
 
-  return <div ref={chartRef} style={{ width: '100%', height: '500px' }} />;
+  const showAllCorrectCountries = () => {
+    d3.selectAll('.country')
+      .attr('fill', function (d) {
+        return data.some(country => country.name === d.properties.name) ? 'blue' : '#ccc';
+      });
+  };
+
+  return (
+    <div className="map-container">
+      <svg id="world-map"></svg>
+      <button onClick={showAllCorrectCountries}>Show All Correct Countries</button>
+    </div>
+  );
 };
 
 export default SvgMap;
-
-//AQUI5

@@ -1,0 +1,26 @@
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 1000;
+}
+.map-container{
+  position:sticky;
+  top:0;
+}
+#world-map {
+  width: 100%;
+  height: auto;
+  max-width: 960px;
+}
+
+button {
+  margin-top: 20px;
+}
