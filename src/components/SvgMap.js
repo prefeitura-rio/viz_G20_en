@@ -1,58 +1,102 @@
-import React, { useState, useEffect } from 'react';
-import * as d3 from 'd3';
-import createREGL from 'regl';
-import { animateMapToBarChart } from 'regl-map-animation';
+import React, { useEffect, useRef } from 'react';
+import * as echarts from 'echarts';
+import worldJson from './world.json'; // Adjust the path as necessary
 
 const SvgMap = () => {
-  const [showChart, setShowChart] = useState(false);
+  const chartRef = useRef(null);
 
   useEffect(() => {
-    if (!showChart) {
-      // D3 code to render the map
-      const svg = d3.select('#map')
-        .attr('width', 800)
-        .attr('height', 600);
+    const chartDom = chartRef.current;
+    const myChart = echarts.init(chartDom);
+    let option;
 
-      const projection = d3.geoMercator().scale(100).translate([400, 300]);
-      const path = d3.geoPath().projection(projection);
+    myChart.showLoading();
+    myChart.hideLoading();
+    echarts.registerMap('WorldMap', worldJson, {
 
-      d3.json('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson')
-        .then(data => {
-          svg.selectAll('path')
-            .data(data.features)
-            .enter()
-            .append('path')
-            .attr('d', path)
-            .attr('fill', 'steelblue');
-        });
-    } else {
-      // Transition to bar chart using regl-map-animation
-      const regl = createREGL('#map');
-      animateMapToBarChart(regl, {
-        mapDataUrl: 'https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson',
-        barData: [
-          { name: 'A', value: 30 },
-          { name: 'B', value: 80 },
-          { name: 'C', value: 45 },
-          { name: 'D', value: 60 },
-          { name: 'E', value: 20 },
-          { name: 'F', value: 90 },
-          { name: 'G', value: 55 },
-        ],
-        width: 800,
-        height: 600,
-      });
-    }
-  }, [showChart]);
+    });
 
-  return (
-    <div>
-      <button onClick={() => setShowChart(!showChart)}>
-        {showChart ? 'Show Map' : 'Show Chart'}
-      </button>
-      <svg id="map"></svg>
-    </div>
-  );
+    const data = [
+      { name: 'South Africa', value: 4822023 },
+      { name: 'Germany', value: 731449 },
+      { name: 'Saudi Arabia', value: 6553255 },
+      { name: 'Argentina', value: 2949131 },
+      { name: 'Australia', value: 38041430 },
+      { name: 'Brazil', value: 5187582 },
+      { name: 'Canada', value: 3590347 },
+      { name: 'China', value: 917092 },
+      { name: 'South Korea', value: 632323 },
+      { name: 'United States', value: 19317568 },
+      { name: 'France', value: 9919945 },
+      { name: 'India', value: 1392313 },
+      { name: 'Indonesia', value: 1595728 },
+      { name: 'Italy', value: 12875255 },
+      { name: 'Japan', value: 6537334 },
+      { name: 'Mexico', value: 3074186 },
+      { name: 'United Kingdom', value: 2885905 },
+      { name: 'Russia', value: 4380415 },
+      { name: 'Turkey', value: 4601893 },
+    ];
+
+    data.sort((a, b) => a.value - b.value);
+
+    const mapOption = {
+      visualMap: {
+        left: 'right',
+        min: 500000,
+        max: 38000000,
+        inRange: {
+          color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026']
+        },
+        text: ['High', 'Low'],
+        calculable: true
+      },
+      series: [
+        {
+          id: 'population',
+          type: 'map',
+          roam: true,
+          map: 'WorldMap',
+          animationDurationUpdate: 1000,
+          universalTransition: true,
+          data: data
+        }
+      ]
+    };
+
+    const barOption = {
+      xAxis: {
+        type: 'value'
+      },
+      yAxis: {
+        type: 'category',
+        axisLabel: {
+          rotate: 30
+        },
+        data: data.map(item => item.name)
+      },
+      animationDurationUpdate: 1000,
+      series: {
+        type: 'bar',
+        id: 'population',
+        data: data.map(item => item.value),
+        universalTransition: true
+      }
+    };
+
+    let currentOption = mapOption;
+    myChart.setOption(mapOption);
+    setInterval(() => {
+      currentOption = currentOption === mapOption ? barOption : mapOption;
+      myChart.setOption(currentOption, true);
+    }, 2000);
+
+    option && myChart.setOption(option);
+  }, []);
+
+  return <div ref={chartRef} style={{ width: '100%', height: '500px' }} />;
 };
 
 export default SvgMap;
+
+//AQUI5
