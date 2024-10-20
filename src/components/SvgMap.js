@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as d3 from 'd3';
 import * as topojson from 'topojson-client';
-import "./SvgMap.css"
+import "./SvgMap.css";
 
 const data = [
   { name: 'South Africa' },
@@ -25,8 +25,7 @@ const data = [
   { name: 'Turkey' },
 ];
 
-const SvgMap = () => {
-  const [correctCountries, setCorrectCountries] = useState([]);
+const SvgMap = ({ correctCountries, setCorrectCountries }) => {
 
   useEffect(() => {
     const svg = d3.select('#world-map')
@@ -81,19 +80,30 @@ const SvgMap = () => {
         });
     });
 
-  }, []);
+  }, [setCorrectCountries]);
+
+  useEffect(() => {
+    if (correctCountries) {
+      setCorrectCountries(true);
+    }
+  }, [correctCountries]);
 
   const showAllCorrectCountries = () => {
     d3.selectAll('.country')
       .attr('fill', function (d) {
         return data.some(country => country.name === d.properties.name) ? 'blue' : '#ccc';
       });
+    setCorrectCountries(true);
   };
 
   return (
-    <div className="map-container">
+    <div className="map-containerr">
       <svg id="world-map"></svg>
-      <button onClick={showAllCorrectCountries}>Show All Correct Countries</button>
+      {correctCountries ? (
+        <p>Congrats!</p>
+      ) : (
+        <button onClick={showAllCorrectCountries}>Mostrar Países</button>
+      )}
     </div>
   );
 };

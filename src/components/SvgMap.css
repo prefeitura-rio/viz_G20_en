@@ -9,16 +9,13 @@
   border: 0px;
   border-radius: 8px;
   pointer-events: none;
-  z-index: 1000;
+  z-index: 999 !important;
 }
-.map-container{
+
+.map-containerr{
   position:sticky;
   top:0;
-}
-#world-map {
-  width: 100%;
-  height: auto;
-  max-width: 960px;
+  z-index: 1001 !important;
 }
 
 button {
