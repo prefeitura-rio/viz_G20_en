@@ -337,96 +337,98 @@ const SvgMap = ({ chartType }) => {
     };
 
     const barOption = {
-      xAxis: {
-        name: 'PIB (Trilhões US$)',
-        type: 'value',
-      },
-      yAxis: {
-        type: 'category',
-        axisLabel: {
-          rotate: 30,
-        },
-        data: dataBar.map((item) => item.name),
-      },
       animationDurationUpdate: 1000,
-      series: {
-        type: 'bar',
-        id: 'population',
-        data: dataBar.map((item) => ({
-          value: item.value / 1000,
-          itemStyle: {
-            color: item.color, // Assign specific color from dataBar
+      series: [
+        {
+          id: 'population',
+          universalTransition: true,
+          type: 'pie',
+          radius: '70%',
+          data: dataBar.map((item) => ({
+            value: item.value,
+            name: item.name,
+            itemStyle: { color: item.color },
+          })),
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)',
+            },
           },
-        })),
-        universalTransition: true,
-      },
-    };
-    const barComercio = {
-      xAxis: {
-        type: 'value',
-      },
-      yAxis: {
-        type: 'category',
-        axisLabel: {
-          rotate: 30,
         },
-        data: dataComercio.map(item => item.name),
-      },
+      ],
+    };
+
+    const barComercio = {
       animationDurationUpdate: 1000,
-      series: [{
-        type: 'bar',
-        id: 'population',
-        data: dataComercio.map(item => ({
-          value: item.value,
-          itemStyle: { color: item.color }, // Assign color based on the dataComercio array
-        })),
-        universalTransition: true,
-      }],
+      series: [
+        {
+          id: 'population',
+          universalTransition: true,
+          type: 'pie',
+          radius: '70%',
+          data: dataComercio.map((item) => ({
+            value: item.value,
+            name: item.name,
+            itemStyle: { color: item.color },
+          })),
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)',
+            },
+          },
+        },
+      ],
     };
 
     const barPopulacao = {
-      xAxis: {
-        type: 'value'
-      },
-      yAxis: {
-        type: 'category',
-        axisLabel: {
-          rotate: 30
-        },
-        data: dataPopulacao.map(item => item.name)
-      },
       animationDurationUpdate: 1000,
-      series: {
-        type: 'bar',
-        id: 'population',
-        data: dataPopulacao.map(item => ({
-          value: item.value,
-          itemStyle: { color: item.color }, // Assign color based on the dataComercio array
-        })),
-        universalTransition: true
-      }
+      series: [
+        {
+          id: 'population',
+          universalTransition: true,
+          type: 'pie',
+          radius: '70%',
+          data: dataPopulacao.map((item) => ({
+            value: item.value,
+            name: item.name,
+            itemStyle: { color: item.color },
+          })),
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)',
+            },
+          },
+        },
+      ],
     };
     const piePatentes = {
-      xAxis: {
-        type: 'value'
-      },
-      yAxis: {
-        type: 'category',
-        axisLabel: {
-          rotate: 30
-        },
-        data: dataPatentes.map(item => item.name)
-      },
       animationDurationUpdate: 1000,
-      series: {
-        type: 'bar',
-        id: 'population',
-        data: dataPatentes.map(item => ({
-          value: item.value,
-          itemStyle: { color: item.color }, // Assign color based on the dataComercio array
-        })),
-        universalTransition: true
-      }
+      series: [
+        {
+          id: 'population',
+          universalTransition: true,
+          type: 'pie',
+          radius: '70%',
+          data: dataPatentes.map((item) => ({
+            value: item.value,
+            name: item.name,
+            itemStyle: { color: item.color },
+          })),
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)',
+            },
+          },
+        },
+      ],
     };
 
     switch (chartType) {
