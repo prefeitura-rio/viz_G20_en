@@ -19,6 +19,7 @@ const MapComponent = ({ setChartType }) => {
       { trigger: '.text-card-map:nth-child(9) .box', chartType: 'mapInfoBrazil', leaveBack: 'mapInfoBrazil' },
       { trigger: '.text-card-map:nth-child(10) .box', chartType: 'mapInfoBrazil2', leaveBack: 'mapInfoBrazil2' },
       { trigger: '.text-card-map:nth-child(11)', chartType: 'mapRio', leaveBack: 'mapRio' },
+      { trigger: '.text-card-map:nth-child(12) .box', chartType: 'mapRio2', leaveBack: 'mapRio2' },
     ];
 
     triggers.forEach(({ trigger, chartType, leaveBack }) => {
@@ -79,12 +80,17 @@ const MapComponent = ({ setChartType }) => {
         </div>
         <div className="text-card-map">
           <div className="box">
-            <h2>Dos 34 eventos oficiais de alto nível,12 deles têm lugar na cidade maravilhosa - incluindo o mais importante deles, a Cúpula dos Líderes.
+            <h2>Durante o G20, foram realizados 34 eventos oficiais de alto nível, espalhados pelo país.
             </h2>
           </div>
         </div>
         <div className="text-card-map">
           {/* 11 */}
+        </div>
+        <div className="text-card-map">
+          <div className="box">
+            <h2>12 dos eventos de alto nível têm lugar na cidade maravilhosa - incluindo o mais importante deles, a Cúpula dos Líderes.</h2>
+          </div>
         </div>
       </div>
     </div>
