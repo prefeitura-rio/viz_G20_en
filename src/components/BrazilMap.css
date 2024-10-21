@@ -1,0 +1,45 @@
+
+.state {
+  stroke: #ffffff;
+  stroke-width: 1.5;
+}
+
+.RJ {
+  fill: #1f77b4;
+} /* Blue */
+.DF {
+  fill: #d62728;
+} /* Red */
+.PA {
+  fill: #2ca02c;
+} /* Green */
+.BA {
+  fill: #ffbb78;
+} /* Yellow */
+.PR {
+  fill: #9467bd;
+} /* Purple */
+.SP {
+  fill: #ff7f0e;
+} /* Orange */
+
+.default {
+  fill: #c8d9e8;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.line {
+  stroke: black;
+  stroke-dasharray: 3 2;
+  stroke-width: 1.5;
+}
+
+.boxMap {
+  fill: white;
+  stroke: black;
+  stroke-width: 1.5;
+}
