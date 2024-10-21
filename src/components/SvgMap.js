@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
 import worldJson from './world.json';
 import "./SvgMap.css";
+import * as d3 from 'd3';
 
 const SvgMap = ({ chartType }) => {
   const chartRef = useRef(null);
@@ -301,28 +302,68 @@ const SvgMap = ({ chartType }) => {
       ]
     };
 
-    const pieOption = {
+    // Create D3 hierarchy and pack layout
+    const root = d3.hierarchy({ children: dataPie })
+      .sum(d => d.value)
+      .sort((a, b) => b.value - a.value);
+
+    d3.pack()
+      .size([500, 500])
+      .padding(5)(root); // Adjust padding as needed
+
+    // Extract bubble data
+    const bubbleData = root.leaves().map(node => ({
+      name: node.data.name,
+      value: node.value,
+      color: node.data.color,
+      x: node.x,
+      y: node.y,
+      r: node.r
+    }));
+
+
+    const bubbleOption = {
+      xAxis: { show: false },
+      yAxis: { show: false },
       animationDurationUpdate: 1000,
       series: [
         {
           id: 'population',
           universalTransition: true,
-          type: 'pie',
-          radius: '70%',
-          data: dataPie.map((item) => ({
-            value: item.value,
+          type: 'scatter',
+          data: bubbleData.map(item => ({
+            value: [item.x, item.y, item.r], // x, y, radius
             name: item.name,
-            itemStyle: { color: item.color },
+            color: item.color
           })),
-          emphasis: {
-            itemStyle: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: 'rgba(0, 0, 0, 0.5)',
-            },
+          symbolSize: function (data) {
+            return data[2] * 2; // Radius scaling for visibility
           },
-        },
-      ],
+          label: {
+            show: true,
+            formatter: function (param) {
+              return param.data.name;
+            },
+            position: 'inside',
+            color: '#fff',
+            fontSize: 10,
+          },
+          itemStyle: {
+            color: function (param) {
+              return param.data.color || '#000';
+            }
+          },
+          emphasis: {
+            focus: 'series',
+            label: {
+              show: true,
+              formatter: function (param) {
+                return param.data.name;
+              }
+            }
+          }
+        }
+      ]
     };
 
     const barComercio = {
@@ -398,7 +439,7 @@ const SvgMap = ({ chartType }) => {
 
     switch (chartType) {
       case 'bar':
-        option = pieOption;
+        option = bubbleOption;
         break;
       case 'barComercio':
         option = barComercio;
