@@ -90,7 +90,7 @@ const SvgMap = ({ chartType }) => {
       { name: 'Turkey', value: 19, color: '#d3b68c' },
       { name: 'Rio de Janeiro', value: 20, color: '#859f82' },
     ];
-    const dataBar = [
+    const dataPie = [
       { name: 'South Africa', value: 399, color: '#c4b5c2' },  // Dodger Blue
       { name: 'Germany', value: 4308, color: '#dea768' },       // Tomato
       { name: 'Saudi Arabia', value: 1062, color: '#e67a70' },  // Lime Green
@@ -186,7 +186,7 @@ const SvgMap = ({ chartType }) => {
 
     data.sort((a, b) => a.value - b.value);
     dataBrazil.sort((a, b) => a.value - b.value);
-    dataBar.sort((a, b) => a.value - b.value);
+    dataPie.sort((a, b) => a.value - b.value);
     dataComercio.sort((a, b) => a.value - b.value);
     dataPopulacao.sort((a, b) => a.value - b.value);
     dataPatentes.sort((a, b) => a.value - b.value);
@@ -263,42 +263,7 @@ const SvgMap = ({ chartType }) => {
         }
       ]
     };
-    const mapRio = {
-      visualMap: {
-        show: false,
-        left: 'right',
-        top: 'center',
-        min: 1,
-        max: 19,
-        inRange: {
-          color: [
-            '#c4b5c2', '#dea768', '#e67a70', '#a4b7a1', '#b7dcda',
-            '#859f82', '#6b7894', '#c3868b', '#b65141', '#7999b4',
-            '#edd07a', '#c9835e', '#a4a3bf', '#afa82d ', '#b5636e',
-            '#62949f', '#efc375', '#9f635a', '#d3b68c', '#006400'
-          ]
-        },
-        // text: ['High', 'Low'],
-        calculable: true
-      },
-      series: [
-        {
-          id: 'population',
-          type: 'map',
-          roam: false,
-          map: 'WorldMap',
-          center: [-43.1729, -22.9068], // Coordenadas aproximadas do centro do Brasil
-          zoom: 30, // Nível de zoom para focar no Brasil
-          animationDurationUpdate: 3000,
-          universalTransition: true,
-          data: dataRio,
-          scaleLimit: {
-            min: 1,
-            max: 30,
-          },
-        }
-      ]
-    };
+
     const mapRio2 = {
       visualMap: {
         show: false,
@@ -336,7 +301,7 @@ const SvgMap = ({ chartType }) => {
       ]
     };
 
-    const barOption = {
+    const pieOption = {
       animationDurationUpdate: 1000,
       series: [
         {
@@ -344,7 +309,7 @@ const SvgMap = ({ chartType }) => {
           universalTransition: true,
           type: 'pie',
           radius: '70%',
-          data: dataBar.map((item) => ({
+          data: dataPie.map((item) => ({
             value: item.value,
             name: item.name,
             itemStyle: { color: item.color },
@@ -433,7 +398,7 @@ const SvgMap = ({ chartType }) => {
 
     switch (chartType) {
       case 'bar':
-        option = barOption;
+        option = pieOption;
         break;
       case 'barComercio':
         option = barComercio;
