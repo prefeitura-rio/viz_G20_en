@@ -11,7 +11,7 @@
   fill: #d62728;
 } /* Red */
 .PA {
-  fill: #2ca02c;
+  fill: yellow;
 } /* Green */
 .BA {
   fill: #ffbb78;
@@ -24,7 +24,7 @@
 } /* Orange */
 
 .default {
-  fill: #c8d9e8;
+  fill: #228B22;
 }
 
 .label {

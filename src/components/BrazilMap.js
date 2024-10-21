@@ -1,30 +1,20 @@
-import React, { useEffect, useRef } from "react";
-import * as d3 from "d3";
-import "./BrazilMap.css";
+import React, { useEffect, useRef } from "react"; import * as d3 from "d3"; import "./BrazilMap.css";
 
 const BrazilMap = ({ chartType }) => {
   const svgRef = useRef();
 
   useEffect(() => {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    const width = window.innerWidth; const height = window.innerHeight;
 
     const svg = d3.select(svgRef.current);
 
     // Clear previous elements to prevent overlap or duplication
     svg.selectAll("*").remove();
 
-    let projection = d3.geoMercator()
+    const projection = d3.geoMercator()
       .scale(850)
       .center([-54, -15])
       .translate([width / 2, height / 2]);
-
-    if (chartType === "mapInfoBrazil3") {
-      projection = d3.geoMercator()
-        .scale(3000) // Increase scale for zoom
-        .center([-43.1729, -22.9068]) // Center on Rio de Janeiro
-        .translate([width / 2, height / 2]);
-    }
 
     const path = d3.geoPath().projection(projection);
 
@@ -49,7 +39,7 @@ const BrazilMap = ({ chartType }) => {
       "https://raw.githubusercontent.com/codeforamerica/click_that_hood/master/public/data/brazil-states.geojson"
     )
       .then((data) => {
-        // Render map paths
+        // Render map paths with a black border for all states
         svg
           .selectAll("path")
           .data(data.features)
@@ -60,6 +50,12 @@ const BrazilMap = ({ chartType }) => {
             const stateName = d.properties.name;
             const stateData = highlightedStates?.[stateName];
             return stateData ? stateData.code : "default";
+          })
+          .attr("stroke", "black") // Add black stroke for country borders
+          .attr("stroke-width", 1) // Adjust border thickness
+          .attr("fill", (d) => {
+            const stateName = d.properties.name;
+            return highlightedStates[stateName] ? "none" : "#c8d9e8"; // Default fill
           });
 
         // Render annotations and labels for highlighted states

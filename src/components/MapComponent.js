@@ -12,13 +12,13 @@ const MapComponent = ({ setChartType }) => {
       { trigger: '.text-card:nth-child(2) .box', chartType: 'map', leaveBack: 'map' },
       { trigger: '.text-card:nth-child(3) .box', chartType: 'bar', leaveBack: 'bar' },
       { trigger: '.text-card:nth-child(4) .box', chartType: 'barComercio', leaveBack: 'barComercio' },
-      { trigger: '.text-card:nth-child(5) .box', chartType: 'verticalBarPopulacao', leaveBack: 'verticalBarPopulacao' },
+      { trigger: '.text-card:nth-child(5) .box', chartType: 'barPopulacao', leaveBack: 'barPopulacao' },
       { trigger: '.text-card:nth-child(6) .box', chartType: 'piePatentes', leaveBack: 'piePatentes' },
       { trigger: '.text-card:nth-child(7)', chartType: 'map', leaveBack: 'map' },
       { trigger: '.text-card:nth-child(8) .box', chartType: 'mapBrazil', leaveBack: 'mapBrazil' },
       { trigger: '.text-card:nth-child(9) .box', chartType: 'mapInfoBrazil', leaveBack: 'mapInfoBrazil' },
       { trigger: '.text-card:nth-child(10) .box', chartType: 'mapInfoBrazil2', leaveBack: 'mapInfoBrazil2' },
-      { trigger: '.text-card:nth-child(11)', chartType: 'mapBrazil', leaveBack: 'mapBrazil' },
+      { trigger: '.text-card:nth-child(11)', chartType: 'mapRio', leaveBack: 'mapRio' },
     ];
 
     triggers.forEach(({ trigger, chartType, leaveBack }) => {
