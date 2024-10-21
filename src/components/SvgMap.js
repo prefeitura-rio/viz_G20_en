@@ -397,7 +397,7 @@ const SvgMap = ({ chartType }) => {
   }, [chartType]);
 
   return <>
-    <div ref={chartRef} className="svg-map" style={{ opacity: opacity ? 1 : 0.5, transition: 'opacity 2s' }} />
+    <div ref={chartRef} className="svg-map" style={{ opacity: opacity, transition: 'opacity 2s' }} />
   </>
 };
 

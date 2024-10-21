@@ -4,12 +4,23 @@
   display: flex;
   justify-content: center;
   text-align: justify;
-  padding: 100px;
+padding-top:100px;
 
 }
 
 .conclusao{
-  max-width: 45rem;
+  max-width: 40rem;
+  margin-bottom:50px;
+  position: relative;
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #717171;
+  font-size: 0.6em;
+  line-height: 1.15;
+  text-align: justify;
+  line-height: 1.5;
 
 }
 

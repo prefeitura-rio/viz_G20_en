@@ -1,5 +1,5 @@
 .content-section {
-  padding: 100px;
+  padding: 50px 100px 100px 100px;
   background-color: white;
   text-align: center;
   display: flex;
@@ -25,7 +25,7 @@
 
 .box-map-intro {
   font-family: "Libre Baskerville", serif;
-  max-width: 35rem;
+  max-width: 40rem;
   padding: 30px;
   
 }

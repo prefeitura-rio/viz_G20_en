@@ -13,7 +13,7 @@ const BrazilMap = ({ chartType }) => {
 
     const projection = d3.geoMercator()
       .scale(850)
-      .center([-54, -15])
+      .center([-45, -15])
       .translate([width / 2, height / 2]);
 
     const path = d3.geoPath().projection(projection);
@@ -93,7 +93,7 @@ const BrazilMap = ({ chartType }) => {
       .catch((error) => console.error("Error loading map data:", error));
   }, [chartType]); // Add chartType as a dependency
 
-  return <svg ref={svgRef} style={{ position: "fixed", top: 0, width: "100vw", height: "100vh", zIndex: 999 }} />;
+  return <svg ref={svgRef} style={{ position: "fixed", top: 0, width: "100vw", height: "100vh", zIndex: "3" }} />;
 };
 
 export default BrazilMap;
