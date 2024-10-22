@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Eventos.css';
 import { CurrentComponentContext } from '../CurrentComponentContext';
 import BigNumbers from './BigNumbers';
+import NobelGrid from './NobelGrid';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +13,9 @@ const Eventos = (props) => {
   const containerRef = useRef(null);
   const [imageSources, setImageSources] = useState([]);
   const bigNumbersRef = useRef(null);
+  const nobelGridRef = useRef(null);
   const [bigNumbersOpacity, setBigNumbersOpacity] = useState(0);
+  const [nobelGridOpacity, setNobelGridOpacity] = useState(0);
 
   useEffect(() => {
     const desktopImages = [
@@ -20,7 +23,7 @@ const Eventos = (props) => {
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/foto2.png',
       "",
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/fotou20.png',
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/fotonobel.png',
+      '',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/fotobandeira.png',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/fotoindio.png',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/fotochanceleres.png',
@@ -34,7 +37,7 @@ const Eventos = (props) => {
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/foto2_mobile.png',
       "",
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/fotou20_mobile.png',
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/nobel1_mobile.png',
+      '',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/fotobandeira_mobile.png',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/fotoindio_mobile.png',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/fotochanceleres_mobile.png',
@@ -83,6 +86,25 @@ const Eventos = (props) => {
       },
     });
   }, []);
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: textRefs.current[4], // O terceiro card de texto
+      start: 'top center',
+      end: 'bottom center',
+      onEnter: () => {
+        gsap.to(nobelGridRef.current, { opacity: 1, duration: 1, onComplete: () => setNobelGridOpacity(1) });
+      },
+      onLeave: () => {
+        gsap.to(nobelGridRef.current, { opacity: 0, duration: 1, onComplete: () => setNobelGridOpacity(0) });
+      },
+      onEnterBack: () => {
+        gsap.to(nobelGridRef.current, { opacity: 1, duration: 1, onComplete: () => setNobelGridOpacity(1) });
+      },
+      onLeaveBack: () => {
+        gsap.to(nobelGridRef.current, { opacity: 0, duration: 1, onComplete: () => setNobelGridOpacity(0) });
+      },
+    });
+  }, []);
 
   const imageRefs = useRef([]);
   const textRefs = useRef([]);
@@ -126,6 +148,11 @@ const Eventos = (props) => {
           <BigNumbers opacity={bigNumbersOpacity} />
         </div>
       </div>
+      <div className="image-container">
+        <div ref={nobelGridRef} style={{ opacity: 0 }}>
+          <NobelGrid opacity={nobelGridOpacity} />
+        </div>
+      </div>
 
       {/* Text Cards */}
       <div className="text-section">
@@ -152,7 +179,7 @@ const Eventos = (props) => {
             <h2>Parte dos eventos são relativos aos Grupos de Engajamento, com participação ativa da sociedade civil. Um deles, o Urban 20 (U20), congrega cidades dos países membros do G20 para articular pautas de economia, clima e desenvolvimento urbano. O grupo culmina com a cúpula de prefeitos, liderada pelo nosso, Eduardo Paes.</h2>
           </div>
         </div>
-        <div className="text-card-eventos" ref={(el) => (textRefs.current[4] = el)}>
+        <div className="text-card-eventos-nobel" ref={(el) => (textRefs.current[4] = el)}>
           <div className="box-eventos">
             <h2>Durante o G20, a cidade recebeu seis laureados com o Prêmio Nobel. Em eventos distintos, esses especialistas palestraram e debateram temas globais cruciais, como inovação tecnológica, acordos internacionais de paz e desenvolvimento sustentável. A presença deles reforçou a importância do evento e colocou o Rio no centro das discussões sobre o futuro da humanidade.</h2>
           </div>

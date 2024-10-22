@@ -71,6 +71,18 @@
   text-align: justify;
   line-height: 1.5;
 }
+.text-card-eventos-nobel {
+  position: relative;
+  height: 200vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #717171;
+  font-size: 0.6em;
+  line-height: 1.15;
+  text-align: justify;
+  line-height: 1.5;
+}
 
 .desenvolvido-por {
   font-family: "Libre Baskerville", serif;
