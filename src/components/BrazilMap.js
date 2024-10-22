@@ -19,20 +19,20 @@ const BrazilMap = ({ chartType }) => {
     const path = d3.geoPath().projection(projection);
 
     // Set highlighted states based on chartType
-    let highlightedStates = {};
-    if (chartType === "mapInfoBrazil") {
-      highlightedStates = {
-        "Rio de Janeiro": { code: "RJ", value: 26, coords: [-43.1729, -22.9068] },
-        "Distrito Federal": { code: "DF", value: 33, coords: [-47.9292, -15.7801] },
-      };
-    } else if (chartType === "mapInfoBrazil2") {
-      highlightedStates = {
-        "Pará": { code: "PA", value: 6, coords: [-48.5044, -1.4558] },
-        "Bahia": { code: "BA", value: 4, coords: [-38.5161, -12.9714] },
-        "Paraná": { code: "PR", value: 3, coords: [-54.5854, -25.5428] },
-        "São Paulo": { code: "SP", value: 2, coords: [-46.6333, -23.5505] },
-      };
-    }
+    // let highlightedStates = {};
+    // if (chartType === "mapInfoBrazil") {
+    let highlightedStates = {
+      "Rio de Janeiro": { code: "RJ", value: 26, coords: [-43.1729, -22.9068] },
+      "Distrito Federal": { code: "DF", value: 33, coords: [-47.9292, -15.7801] },
+    };
+    // } else if (chartType === "mapInfoBrazil2") {
+    //   highlightedStates = {
+    //     "Pará": { code: "PA", value: 6, coords: [-48.5044, -1.4558] },
+    //     "Bahia": { code: "BA", value: 4, coords: [-38.5161, -12.9714] },
+    //     "Paraná": { code: "PR", value: 3, coords: [-54.5854, -25.5428] },
+    //     "São Paulo": { code: "SP", value: 2, coords: [-46.6333, -23.5505] },
+    //   };
+    // }
 
     // Load the GeoJSON map data
     d3.json(
@@ -91,9 +91,9 @@ const BrazilMap = ({ chartType }) => {
         });
       })
       .catch((error) => console.error("Error loading map data:", error));
-  }, [chartType]); // Add chartType as a dependency
+  }, []); // Add chartType as a dependency
 
-  return <svg ref={svgRef} style={{ position: "fixed", top: 0, width: "100vw", height: "100vh", zIndex: "3" }} />;
+  return <svg ref={svgRef} style={{ opacity: chartType === 'mapInfoBrazil' ? 1 : 0, transition: "opacity 1s", position: "fixed", top: 0, width: "100vw", height: "100vh", zIndex: "3" }} />;
 };
 
 export default BrazilMap;

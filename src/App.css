@@ -1,7 +1,13 @@
 body {
   margin: 0;
   font-family: "Libre Baskerville", serif;
-  font-weight: 400;
+  font-weight: 400 !important;
+  font-style: normal;
+}
+
+h2{
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400 !important;
   font-style: normal;
 }
 

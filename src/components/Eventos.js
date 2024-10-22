@@ -21,7 +21,7 @@ const Eventos = (props) => {
     const desktopImages = [
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/foto1.png',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/foto2.png',
-      "",
+      "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/fotomam1.jpg",
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/fotou20.png',
       '',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/fotobandeira.png',

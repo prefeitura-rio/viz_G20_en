@@ -41,22 +41,24 @@
   color: #717171;
   font-size: 0.6em;
   line-height: 1.15;
-  text-align: justify;
+  /* text-align: justify; */
   line-height: 1.5;
+  
 }
 
 .box-eventos {
   font-family: "Libre Baskerville", serif;
-  max-width: 40rem;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 1); /* Translucent background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Elevation */
+  max-width: 35rem;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.9); /* Translucent background */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.2) ;
 }
 
 
 .text-card-eventos h2 {
   margin: 0;
-  max-width: 40rem;
+  max-width: 35rem;
 }
 
 .text-card-eventos3 {
@@ -87,7 +89,8 @@
 .desenvolvido-por {
   font-family: "Libre Baskerville", serif;
   padding-bottom:50vh;
-  max-width: 40rem;
+  max-width: 35rem;
+  font-weight: bold !important
 }
 .sem-estilo-link {
   text-decoration: none;

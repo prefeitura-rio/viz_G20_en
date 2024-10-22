@@ -8,7 +8,7 @@
 .quiz-intro {
   margin:10px auto;
   font-family: "Libre Baskerville", serif;
-  max-width: 40rem;
+  max-width: 35rem;
   padding: 30px;
   background-color: rgba(255, 255, 255, 1); /* Translucent background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Elevation */

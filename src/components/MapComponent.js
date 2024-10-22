@@ -13,13 +13,13 @@ const MapComponent = ({ setChartType }) => {
       { trigger: '.text-card-map:nth-child(3) .box', chartType: 'bar', leaveBack: 'bar' },
       { trigger: '.text-card-map:nth-child(4) .box', chartType: 'barComercio', leaveBack: 'barComercio' },
       { trigger: '.text-card-map:nth-child(5) .box', chartType: 'barPopulacao', leaveBack: 'barPopulacao' },
-      { trigger: '.text-card-map:nth-child(6) .box', chartType: 'piePatentes', leaveBack: 'piePatentes' },
+      { trigger: '.text-card-map:nth-child(6) .box', chartType: 'bubbleOptionPatentes', leaveBack: 'bubbleOptionPatentes' },
       { trigger: '.text-card-map:nth-child(7)', chartType: 'map', leaveBack: 'map' },
       { trigger: '.text-card-map:nth-child(8) .box', chartType: 'mapBrazil', leaveBack: 'mapBrazil' },
       { trigger: '.text-card-map:nth-child(9) .box', chartType: 'mapInfoBrazil', leaveBack: 'mapInfoBrazil' },
       { trigger: '.text-card-map:nth-child(10) .box', chartType: 'mapInfoBrazil2', leaveBack: 'mapInfoBrazil2' },
-      { trigger: '.text-card-map:nth-child(11)', chartType: 'mapRio', leaveBack: 'mapRio' },
-      { trigger: '.text-card-map:nth-child(12) .box', chartType: 'mapRio2', leaveBack: 'mapRio2' },
+      { trigger: '.text-card-map:nth-child(11) .box', chartType: 'mapRio2', leaveBack: 'mapRio2' },
+      { trigger: '.text-card-map:nth-child(12)', chartType: 'mapRio', leaveBack: 'mapRio' },
     ];
 
     triggers.forEach(({ trigger, chartType, leaveBack }) => {
@@ -37,12 +37,13 @@ const MapComponent = ({ setChartType }) => {
       <div className="text-section-map">
         <div className="text-card-map">
           <div className="box">
-            <h2>O G20 é composto por 19 países, mais a União Europeia e a União Africana. Você sabe dizer quais são os países membros do grupo? Dica: são as maiores economias do mundo, e somente 5 ficam no Hemisfério Sul. Selecione os países no mapa:</h2>
+            <h2>O G20 é composto por 19 países, mais a União Europeia e a União Africana. Você sabe dizer quais são os países membros do grupo? </h2>
           </div>
         </div>
         <div className="text-card-map">
           <div className="box">
-            <h2>A participação de um país no G20 não é determinada por votação ou eleição, mas por sua relevância econômica e geopolítica global. Isso torna o G20 um grupo de alto impacto em discussões globais sobre economia, comércio e outros temas importantes. Os países do G20 concentram:</h2>
+            <h2>A participação de um país no G20 não é determinada por votação ou eleição, mas por sua relevância econômica e geopolítica global. Isso torna o G20 um grupo de alto impacto em discussões globais sobre economia, comércio e outros temas importantes. Os países do G20 concentram:
+            </h2>
           </div>
         </div>
         <div className="text-card-map">
@@ -85,12 +86,12 @@ const MapComponent = ({ setChartType }) => {
           </div>
         </div>
         <div className="text-card-map">
-          {/* 11 */}
-        </div>
-        <div className="text-card-map">
           <div className="box">
             <h2>12 dos eventos de alto nível têm lugar na cidade maravilhosa - incluindo o mais importante deles, a Cúpula dos Líderes.</h2>
           </div>
+        </div>
+        <div className="text-card-map">
+          {/* 12 */}
         </div>
       </div>
     </div>

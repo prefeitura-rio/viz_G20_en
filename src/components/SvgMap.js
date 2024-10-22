@@ -9,7 +9,7 @@ const SvgMap = ({ chartType }) => {
   const [opacity, setOpacity] = React.useState(1);
 
   useEffect(() => {
-    if (chartType === 'mapInfoBrazil' || chartType === 'mapInfoBrazil2') {
+    if (chartType === 'mapInfoBrazil' || chartType === 'mapInfoBrazil2' || chartType === 'mapRio' || chartType === 'mapRio2') {
       setOpacity(0);
       return; // Skip chart rendering if chartType is 'mapNow'
     } else {
@@ -212,6 +212,16 @@ const SvgMap = ({ chartType }) => {
       },
       series: [
         {
+          itemStyle: {
+            emphasis: {
+              areaColor: null,
+              label: {
+                // fontSize: 8,
+                color: '#000',
+              },
+
+            }
+          },
           id: 'population',
           type: 'map',
           roam: false,
@@ -308,8 +318,8 @@ const SvgMap = ({ chartType }) => {
       .sort((a, b) => b.value - a.value);
 
     d3.pack()
-      .size([500, 500])
-      .padding(5)(root); // Adjust padding as needed
+      .size([1000, 1000])
+      .padding(0)(root); // Adjust padding as needed
 
     // Extract bubble data
     const bubbleData = root.leaves().map(node => ({
@@ -337,7 +347,7 @@ const SvgMap = ({ chartType }) => {
             color: item.color
           })),
           symbolSize: function (data) {
-            return data[2] * 2; // Radius scaling for visibility
+            return data[2]
           },
           label: {
             show: true,
@@ -413,6 +423,70 @@ const SvgMap = ({ chartType }) => {
         },
       ],
     };
+
+    const rootPatentes = d3.hierarchy({ children: dataPatentes })
+      .sum(d => d.value)
+      .sort((a, b) => b.value - a.value);
+
+    d3.pack()
+      .size([500, 500])
+      .padding(5)(rootPatentes); // Adjust padding as needed
+
+    // Extract bubble data
+    const bubbleDataPatentes = rootPatentes.leaves().map(node => ({
+      name: node.data.name,
+      value: node.value,
+      color: node.data.color,
+      x: node.x,
+      y: node.y,
+      r: node.r
+    }));
+
+
+    const bubbleOptionPatentes = {
+      xAxis: { show: false },
+      yAxis: { show: false },
+      animationDurationUpdate: 1000,
+      series: [
+        {
+          id: 'population',
+          universalTransition: true,
+          type: 'scatter',
+          data: bubbleDataPatentes.map(item => ({
+            value: [item.x, item.y, item.r], // x, y, radius
+            name: item.name,
+            color: item.color
+          })),
+          symbolSize: function (data) {
+            return data[2] * 2; // Radius scaling for visibility
+          },
+          label: {
+            show: true,
+            formatter: function (param) {
+              return param.data.name;
+            },
+            position: 'inside',
+            color: '#fff',
+            fontSize: 10,
+          },
+          itemStyle: {
+            color: function (param) {
+              return param.data.color || '#000';
+            }
+          },
+          emphasis: {
+            focus: 'series',
+            label: {
+              show: true,
+              formatter: function (param) {
+                return param.data.name;
+              }
+            }
+          }
+        }
+      ]
+    };
+
     const piePatentes = {
       animationDurationUpdate: 1000,
       series: [
@@ -447,18 +521,18 @@ const SvgMap = ({ chartType }) => {
       case 'barPopulacao':
         option = barPopulacao;
         break;
-      case 'piePatentes':
-        option = piePatentes;
+      case 'bubbleOptionPatentes':
+        option = bubbleOptionPatentes;
         break;
       case 'mapBrazil':
         option = mapBrazil;
         break;
-      case 'mapRio':
-        option = mapBrazil;
-        break;
-      case 'mapRio2':
-        option = mapRio2;
-        break;
+      // case 'mapRio':
+      //   option = mapBrazil;
+      //   break;
+      // case 'mapRio2':
+      //   option = mapRio2;
+      //   break;
       case 'map':
         option = mapOption;
         break;
@@ -469,7 +543,7 @@ const SvgMap = ({ chartType }) => {
   }, [chartType]);
 
   return <>
-    <div ref={chartRef} className="svg-map" style={{ opacity: chartType === "mapRio" ? 1 : opacity, transition: 'opacity 2s' }} />
+    <div ref={chartRef} className="svg-map" style={{ opacity: opacity, transition: 'opacity 1s', zIndex: 5 }} />
   </>
 };
 
