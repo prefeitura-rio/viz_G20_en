@@ -29,7 +29,6 @@
 
 .text-section {
   position: relative;
-  z-index: 1;
 }
 
 .text-card-eventos {
@@ -41,7 +40,7 @@
   color: #717171;
   font-size: 0.6em;
   line-height: 1.15;
-  /* text-align: justify; */
+  /* text-align: left; */
   line-height: 1.5;
   
 }
@@ -53,6 +52,7 @@
   background-color: rgba(255, 255, 255, 0.9); /* Translucent background */
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.2) ;
+  z-index: 9999 !important;
 }
 
 
@@ -70,7 +70,7 @@
   color: #717171;
   font-size: 0.6em;
   line-height: 1.15;
-  text-align: justify;
+  text-align: left;
   line-height: 1.5;
 }
 .text-card-eventos-nobel {
@@ -82,7 +82,7 @@
   color: #717171;
   font-size: 0.6em;
   line-height: 1.15;
-  text-align: justify;
+  text-align: left;
   line-height: 1.5;
 }
 

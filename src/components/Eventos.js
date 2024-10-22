@@ -35,8 +35,8 @@ const Eventos = (props) => {
     const mobileImages = [
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/foto1_mobile.png',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/foto2_mobile.png',
-      "",
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/fotou20_mobile.png',
+      "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/mam_1_mobile.jpg",
+      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/u20_mobile.png',
       '',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/fotobandeira_mobile.png',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/fotoindio_mobile.png',

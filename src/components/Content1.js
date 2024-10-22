@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Content1.css';
 import MapComponent from './MapComponent';
 import SvgMap from './SvgMap';
-import BrazilMap from './BrazilMap';
-import map_rio from '../assets/map_rio.png';
-import BrazilMap2 from './BrazilMap2';
+import map_rio from '../assets/map_rio.png'
+import mapa1 from '../assets/mapa1.png'
+import mapa2 from '../assets/mapa2.png'
 const Content1 = ({ id }) => {
   const [chartType, setChartType] = useState('map'); // Default to 'map'
 
@@ -45,19 +45,39 @@ const Content1 = ({ id }) => {
         </div>
         <SvgMap chartType={chartType} />
         <MapComponent setChartType={setChartType} />
-        <BrazilMap chartType={chartType} ></BrazilMap>
-        <BrazilMap2 chartType={chartType} ></BrazilMap2>
-        <img style={{
-          opacity: chartType === 'mapRio2' ? 1 : 0,
-          // transition: "opacity 0.1s",
+
+        {chartType === 'mapInfoBrazil' && <img style={{
+          opacity: chartType === 'mapInfoBrazil' ? 1 : 0,
+          transition: "opacity 1s",
           position: "fixed",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           maxWidth: "800px",
           maxHeight: "1200px",
-          zIndex: "3"
-        }} src={map_rio} alt="maprio"></img>
+
+        }} src={map_rio} alt="mapa1"></img>}
+        {chartType === 'mapInfoBrazil2' && <img style={{
+          opacity: chartType === 'mapInfoBrazil2' ? 1 : 0,
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          maxWidth: "800px",
+          maxHeight: "1200px",
+
+        }} src={mapa2} alt="mapa2"></img>}
+        {chartType === 'mapRio2' && <img style={{
+          opacity: chartType === 'mapRio2' ? 1 : 0,
+          transition: "opacity 0.1s",
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          maxWidth: "800px",
+          maxHeight: "1200px",
+
+        }} src={map_rio} alt="maprio"></img>}
       </div>
     </>
   );

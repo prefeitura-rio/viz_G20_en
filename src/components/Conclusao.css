@@ -3,7 +3,7 @@
   margin: 0 !important;
   display: flex;
   justify-content: center;
-  text-align: justify;
+  text-align: left;
 padding-top:100px;
 
 }
@@ -19,7 +19,7 @@ padding-top:100px;
   color: #717171;
   font-size: 0.6em;
   line-height: 1.15;
-  text-align: justify;
+  text-align: left;
   line-height: 1.5;
 
 }

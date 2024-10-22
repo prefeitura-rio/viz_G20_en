@@ -69,28 +69,7 @@ const SvgMap = ({ chartType }) => {
       { name: 'Turkey', value: 4601893 },
       { name: 'Rio de Janeiro', value: 20 }
     ];
-    const dataRio = [
-      { name: 'South Africa', value: 1, color: '#c4b5c2' },
-      { name: 'Germany', value: 2, color: '#dea768' },
-      { name: 'Saudi Arabia', value: 3, color: '#e67a70' },
-      { name: 'Argentina', value: 4, color: '#a4b7a1' },
-      { name: 'Australia', value: 5, color: '#b7dcda' },
-      { name: 'Brazil', value: 6, color: '#859f82' },
-      { name: 'Canada', value: 7, color: '#6b7894' },
-      { name: 'China', value: 8, color: '#c3868b' },
-      { name: 'South Korea', value: 9, color: '#b65141' },
-      { name: 'United States', value: 10, color: '#7999b4' },
-      { name: 'France', value: 11, color: '#edd07a' },
-      { name: 'India', value: 12, color: '#c9835e' },
-      { name: 'Indonesia', value: 13, color: '#a4a3bf' },
-      { name: 'Italy', value: 14, color: '#afa82d ' },
-      { name: 'Japan', value: 15, color: '#b5636e' },
-      { name: 'Mexico', value: 16, color: '#62949f' },
-      { name: 'United Kingdom', value: 17, color: '#efc375' },
-      { name: 'Russia', value: 18, color: '#9f635a' },
-      { name: 'Turkey', value: 19, color: '#d3b68c' },
-      { name: 'Rio de Janeiro', value: 20, color: '#859f82' },
-    ];
+
     const dataPie = [
       { name: 'South Africa', value: 399, color: '#c4b5c2' },  // Dodger Blue
       { name: 'Germany', value: 4308, color: '#dea768' },       // Tomato
@@ -258,6 +237,16 @@ const SvgMap = ({ chartType }) => {
       },
       series: [
         {
+          itemStyle: {
+            emphasis: {
+              areaColor: null,
+              label: {
+                // fontSize: 8,
+                color: '#000',
+              },
+
+            }
+          },
           id: 'population',
           type: 'map',
           roam: false,
@@ -275,50 +264,13 @@ const SvgMap = ({ chartType }) => {
       ]
     };
 
-    const mapRio2 = {
-      visualMap: {
-        show: false,
-        left: 'right',
-        top: 'center',
-        min: 1,
-        max: 19,
-        inRange: {
-          color: [
-            '#c4b5c2', '#dea768', '#e67a70', '#a4b7a1', '#b7dcda',
-            '#859f82', '#6b7894', '#c3868b', '#b65141', '#7999b4',
-            '#edd07a', '#c9835e', '#a4a3bf', '#afa82d ', '#b5636e',
-            '#62949f', '#efc375', '#9f635a', '#d3b68c', '#006400'
-          ]
-        },
-        // text: ['High', 'Low'],
-        calculable: true
-      },
-      series: [
-        {
-          id: 'population',
-          type: 'map',
-          roam: false,
-          map: 'WorldMap',
-          center: [-42.1729, -22.5068], // Coordenadas aproximadas do centro do Brasil
-          zoom: 34, // Nível de zoom para focar no Brasil
-          animationDurationUpdate: 3000,
-          universalTransition: true,
-          data: dataRio,
-          scaleLimit: {
-            min: 1,
-            max: 30,
-          },
-        }
-      ]
-    };
-
     // Create D3 hierarchy and pack layout
     const root = d3.hierarchy({ children: dataPie })
       .sum(d => d.value)
       .sort((a, b) => b.value - a.value);
 
     d3.pack()
-      .size([1000, 1000])
+      .size([500, 500])
       .padding(0)(root); // Adjust padding as needed
 
     // Extract bubble data
@@ -347,7 +299,7 @@ const SvgMap = ({ chartType }) => {
             color: item.color
           })),
           symbolSize: function (data) {
-            return data[2]
+            return data[2] * 2.5
           },
           label: {
             show: true,
@@ -458,7 +410,7 @@ const SvgMap = ({ chartType }) => {
             color: item.color
           })),
           symbolSize: function (data) {
-            return data[2] * 2; // Radius scaling for visibility
+            return data[2] * 2.5; // Radius scaling for visibility
           },
           label: {
             show: true,
@@ -487,29 +439,6 @@ const SvgMap = ({ chartType }) => {
       ]
     };
 
-    const piePatentes = {
-      animationDurationUpdate: 1000,
-      series: [
-        {
-          id: 'population',
-          universalTransition: true,
-          type: 'pie',
-          radius: '70%',
-          data: dataPatentes.map((item) => ({
-            value: item.value,
-            name: item.name,
-            itemStyle: { color: item.color },
-          })),
-          emphasis: {
-            itemStyle: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: 'rgba(0, 0, 0, 0.5)',
-            },
-          },
-        },
-      ],
-    };
 
     switch (chartType) {
       case 'bar':
@@ -527,12 +456,6 @@ const SvgMap = ({ chartType }) => {
       case 'mapBrazil':
         option = mapBrazil;
         break;
-      // case 'mapRio':
-      //   option = mapBrazil;
-      //   break;
-      // case 'mapRio2':
-      //   option = mapRio2;
-      //   break;
       case 'map':
         option = mapOption;
         break;

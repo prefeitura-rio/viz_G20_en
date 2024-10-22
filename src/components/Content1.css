@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   position: relative; /* Ensure z-index works */
-  z-index: 3; /* Ensure this is higher than .logo-container */
+z-index: 1;
 }
 
 .text-card-map-intro {
@@ -19,7 +19,7 @@
   color: #717171;
   font-size: 0.6em;
   line-height: 1.15;
-  text-align: justify;
+  text-align: left;
   line-height: 1.5;
 }
 
@@ -33,13 +33,13 @@
 /* Media query for tablets */
 @media (max-width: 768px) {
  .content-section{
-   padding: 20px;
+   padding: 0px;
  }
 }
 
 /* Media query for smartphones */
 @media (max-width: 480px) {
   .content-section{
-    padding: 30px;
+    padding: 0px;
   }
 }
