@@ -3,6 +3,7 @@ import './Content1.css';
 import MapComponent from './MapComponent';
 import SvgMap from './SvgMap';
 import BrazilMap from './BrazilMap';
+import RioMap from './RioMap';
 
 const Content1 = ({ id }) => {
   const [chartType, setChartType] = useState('map'); // Default to 'map'
@@ -38,7 +39,7 @@ const Content1 = ({ id }) => {
         </div>
         <SvgMap chartType={chartType} />
         <MapComponent setChartType={setChartType} />
-        {(chartType === 'mapInfoBrazil' || chartType === 'mapInfoBrazil2') && <BrazilMap chartType={chartType} ></BrazilMap>}
+        {(chartType === 'mapInfoBrazil' || chartType === 'mapInfoBrazil2') && <RioMap chartType={chartType} ></RioMap>}
       </div>
     </>
   );
