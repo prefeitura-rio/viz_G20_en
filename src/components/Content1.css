@@ -8,7 +8,6 @@
   position: relative; /* Ensure z-index works */
 z-index: 1;
 }
-
 .text-card-map-intro {
   margin-bottom:50px;
   position: relative;
@@ -27,6 +26,7 @@ z-index: 1;
   font-family: "Libre Baskerville", serif;
   max-width: 35rem;
   padding: 30px;
+  margin-top: 30px;
   
 }
 

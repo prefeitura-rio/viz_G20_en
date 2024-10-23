@@ -86,12 +86,6 @@
   line-height: 1.5;
 }
 
-.desenvolvido-por {
-  font-family: "Libre Baskerville", serif;
-  padding-bottom:50vh;
-  max-width: 35rem;
-  font-weight: bold !important
-}
 .sem-estilo-link {
   text-decoration: none;
   color: inherit;
