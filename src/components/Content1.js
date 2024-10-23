@@ -46,38 +46,24 @@ const Content1 = ({ id }) => {
         <SvgMap chartType={chartType} />
         <MapComponent setChartType={setChartType} />
 
-        {chartType === 'mapInfoBrazil' && <img style={{
-          opacity: chartType === 'mapInfoBrazil' ? 1 : 0,
-          transition: "opacity 1s",
-          position: "fixed",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          maxWidth: "800px",
-          maxHeight: "1200px",
-
-        }} src={map_rio} alt="mapa1"></img>}
-        {chartType === 'mapInfoBrazil2' && <img style={{
-          opacity: chartType === 'mapInfoBrazil2' ? 1 : 0,
-          position: "fixed",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          maxWidth: "800px",
-          maxHeight: "1200px",
-
-        }} src={mapa2} alt="mapa2"></img>}
-        {chartType === 'mapRio2' && <img style={{
-          opacity: chartType === 'mapRio2' ? 1 : 0,
-          transition: "opacity 0.1s",
-          position: "fixed",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          maxWidth: "800px",
-          maxHeight: "1200px",
-
-        }} src={map_rio} alt="maprio"></img>}
+        {chartType === 'mapInfoBrazil' && <img
+          className="special-image"
+          style={{ opacity: chartType === 'mapInfoBrazil' ? 1 : 0 }}
+          src={map_rio}
+          alt="mapa1"
+        />}
+        {chartType === 'mapInfoBrazil2' && <img
+          className="special-image2"
+          style={{ opacity: chartType === 'mapInfoBrazil2' ? 1 : 0 }}
+          src={mapa1}
+          alt="mapa2"
+        />}
+        {chartType === 'mapRio2' && <img
+          className="special-image3"
+          style={{ opacity: chartType === 'mapRio2' ? 1 : 0 }}
+          src={map_rio}
+          alt="mapa3"
+        />}
       </div>
     </>
   );
