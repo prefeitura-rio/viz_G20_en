@@ -29,6 +29,9 @@ padding-top:100px;
   .conclusao-container{
     padding: 30px;
   }
+  .conclusao{
+    font-size: 0.65em;
+  }
  }
  
  /* Media query for smartphones */

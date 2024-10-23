@@ -59,6 +59,12 @@
   margin: 20px;
   padding: 20px;
   }
+  .text-card-map {
+    font-size: 0.65em;
+  }
+  .text-card-map-especial {
+    font-size: 0.65em;
+  }
 }
 
 /* Media query for smartphones */

@@ -101,6 +101,15 @@
     max-width: 100vw;
     min-height: 100vh;
   }
+  .text-card-eventos {
+    font-size: 0.65em;
+  }
+  .text-card-eventos3 {
+    font-size: 0.65em;
+  }
+  .text-card-eventos-nobel {
+    font-size: 0.65em;
+  }
 }
 
 /* Media query for smartphones */

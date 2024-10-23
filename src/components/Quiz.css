@@ -114,3 +114,21 @@
   background: #ddd;
   margin: 20px 0;
 }
+
+@media (max-width: 768px) {
+ .g20_title{
+  font-size: 0.99rem;
+ }
+ .quiz-question {
+  font-size: 0.99rem;
+ }
+ .quiz-question h3 {
+  font-size: 0.99rem;
+ }
+ .option-btn{
+  font-size: 0.99rem;
+ }
+ .quiz-explanation {
+  font-size: 0.99rem;
+}
+}
