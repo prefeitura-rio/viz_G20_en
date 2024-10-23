@@ -330,6 +330,32 @@ const SvgMap = ({ chartType }) => {
 
     const barComercio = {
       animationDurationUpdate: 1000,
+      legend: {
+        bottom: 10,
+        left: 'center',
+        data: [
+          'Brazil',
+          'South Africa',
+          'Germany',
+          'Saudi Arabia',
+          'Argentina',
+          'Australia',
+          'Canada',
+          'China',
+          'South Korea',
+          'United States',
+          'France',
+          'India',
+          'Indonesia',
+          'Italy',
+          'Japan',
+          'Mexico',
+          'United Kingdom',
+          'Russia',
+          'Turkey',
+          'Resto do Mundo'
+        ]
+      },
       series: [
         {
           id: 'population',
@@ -353,27 +379,43 @@ const SvgMap = ({ chartType }) => {
     };
 
     const barPopulacao = {
-      animationDurationUpdate: 1000,
+      legend: {
+        top: '5%',
+        left: 'center'
+      },
       series: [
         {
           id: 'population',
           universalTransition: true,
           type: 'pie',
-          radius: '70%',
+          radius: ['40%', '70%'],
+          avoidLabelOverlap: false,
+          itemStyle: {
+            borderRadius: 10,
+            borderColor: '#fff',
+            borderWidth: 2
+          },
+          label: {
+            show: false,
+            position: 'center'
+          },
+          emphasis: {
+            label: {
+              show: true,
+              fontSize: 40,
+              fontWeight: 'bold'
+            }
+          },
+          labelLine: {
+            show: false
+          },
           data: dataPopulacao.map((item) => ({
             value: item.value,
             name: item.name,
-            itemStyle: { color: item.color },
-          })),
-          emphasis: {
-            itemStyle: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: 'rgba(0, 0, 0, 0.5)',
-            },
-          },
-        },
-      ],
+            itemStyle: { color: item.color }
+          }))
+        }
+      ]
     };
 
     const rootPatentes = d3.hierarchy({ children: dataPatentes })
