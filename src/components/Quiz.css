@@ -1,25 +1,100 @@
-.quiz-container {
-  padding-top:20px;
+.quiz-container2 {
+  padding-top:50px;
+  margin-bottom:-20px;
+  padding-bottom:20px;
+  width: 100%;
   background-color: white;
-  z-index: 998 !important;
-  
 }
-
-.quiz-intro {
-  margin:10px auto;
-  font-family: "Libre Baskerville", serif;
-  max-width: 35rem;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 1); /* Translucent background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Elevation */
+.quiz-container {
+  max-width: 600px;
+  margin: 20px auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+}
+.g20_title{
+  margin: 0 20px;
+  max-width: 600px;
+}
+.quiz-image {
   position: relative;
-
-  color: #717171;
- 
-  line-height: 1.15;
-  text-align: left;
-  line-height: 1.5;
 }
-.flourish-credit{
-  display: none;
+
+.quiz-image img {
+  width: 100%;
+  height: auto;
+}
+
+.image-credit {
+  font-size: 12px;
+  color: #888;
+  padding: 5px;
+  text-align: center;
+}
+
+.quiz-content {
+  padding: 20px;
+}
+
+.quiz-question {
+  margin-bottom: 20px;
+}
+
+.quiz-question h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-btn {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.option-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.option-btn.correct {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.option-btn.incorrect {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.feedback-icon {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.quiz-explanation {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.separator {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 20px 0;
 }
