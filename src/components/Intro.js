@@ -92,7 +92,6 @@ const Intro = (props) => {
         </div>
       )}
       <div className="video-container">
-        <div className="video-overlay"></div>
         {videoSources.map((src, index) => (
           <video
             key={index}
