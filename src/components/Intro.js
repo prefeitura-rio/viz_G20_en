@@ -78,8 +78,8 @@ const Intro = (props) => {
   }, []);
 
   const videoSources = [
-    'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/2.mp4',
     'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/1.mp4',
+    'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/2.mp4',
     'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/3.mp4',
     'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/4.mp4',
   ];
@@ -92,6 +92,7 @@ const Intro = (props) => {
         </div>
       )}
       <div className="video-container">
+        <div className="video-overlay"></div>
         {videoSources.map((src, index) => (
           <video
             key={index}

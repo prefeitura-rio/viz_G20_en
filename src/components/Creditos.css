@@ -1,12 +1,13 @@
 .creditos {
-  background-color: white;
+  /* background-color: white; */
   padding-top: 100px;
   padding-bottom: 100px;
-  margin-top: -20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
+  max-width: 35rem;
+  margin: 0 auto;
 }
 
 h2 {
@@ -14,8 +15,8 @@ h2 {
 }
 
 .section {
-  max-width: 35rem;
-  text-align: center; /* Center the text */
+  max-width: 40rem;
+  text-align: left; /* left the text */
   margin-bottom: 40px; /* Space between sections */
 }
 
@@ -30,8 +31,10 @@ h2 {
 }
 
 .logo-creditos {
-  padding-top: 5vh;
-  margin: 10vh;
+  /* margin: 10vh; */
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  margin-left: -30px;
 }
 
 .logo-creditos img {
@@ -39,10 +42,9 @@ h2 {
   width: 150px;
 }
 
-@media (max-width: 768px) {
-
-  .logo-creditos img {
-    width: 100px; /* Adjust size as needed */
-    height: auto;
+@media (max-width: 600px) {
+  .creditos {
+    padding: 30px;
   }
+  
 }

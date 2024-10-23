@@ -18,8 +18,8 @@ const MapComponent = ({ setChartType }) => {
       { trigger: '.text-card-map-especial:nth-child(8) .box', chartType: 'mapBrazil', leaveBack: 'mapBrazil' },
       { trigger: '.text-card-map-especial:nth-child(9) .box', chartType: 'mapInfoBrazil', leaveBack: 'mapInfoBrazil' },
       { trigger: '.text-card-map:nth-child(10) .box', chartType: 'mapInfoBrazil2', leaveBack: 'mapInfoBrazil2' },
-      { trigger: '.text-card-map:nth-child(11) .box', chartType: 'mapRio2', leaveBack: 'mapRio2' },
-      { trigger: '.text-card-map:nth-child(12)', chartType: 'mapRio', leaveBack: 'mapRio' },
+      // { trigger: '.text-card-map:nth-child(11) .box', chartType: 'mapRio2', leaveBack: 'mapRio2' },
+      { trigger: '.text-card-map:nth-child(11)', chartType: 'mapRio', leaveBack: 'mapRio' },
     ];
 
     triggers.forEach(({ trigger, chartType, leaveBack }) => {
@@ -71,12 +71,12 @@ const MapComponent = ({ setChartType }) => {
         </div>
         <div className="text-card-map-especial">
           <div className="box">
-            <h2>O Brasil no G20: O Brasil, presente no G20 desde a primeira reunião, se posicionou como uma voz chave na defesa dos países emergentes. A posição, aliada a uma economia em crescimento, fortaleceu sua imagem internacional. Sua participação vai além de simplesmente ocupar um assento; o Brasil busca moldar as decisões globais, especialmente em áreas como desenvolvimento sustentável, justiça social e mudanças climáticas. </h2>
+            <h2>O Brasil, presente no G20 desde a primeira reunião, se posicionou como uma voz chave na defesa dos países emergentes. A posição, aliada a uma economia em crescimento, fortaleceu sua imagem internacional. Sua participação vai além de simplesmente ocupar um assento; o Brasil busca moldar as decisões globais, especialmente em áreas como desenvolvimento sustentável, justiça social e mudanças climáticas. </h2>
           </div>
         </div>
         <div className="text-card-map-especial">
           <div className="box">
-            <h2>O G20 no Brasil: Em 2024, sob a presidência brasileira, o G20 adota o lema “Construindo um Mundo Justo e um Planeta Sustentável” e tem três temas prioritários: transição energética, desenvolvimento sustentável justo (com ênfase no combate à fome, à pobreza e à desigualdade) e reforma das instituições multilaterais. Desde dezembro de 2023, foram programados 105 eventos oficiais por todo o Brasil, 26 deles no Rio</h2>
+            <h2>Em 2024, sob a presidência brasileira, o G20 adota o lema “Construindo um Mundo Justo e um Planeta Sustentável” e tem três temas prioritários: transição energética, desenvolvimento sustentável justo (com ênfase no combate à fome, à pobreza e à desigualdade) e reforma das instituições multilaterais. Desde dezembro de 2023, foram programados 105 eventos oficiais por todo o Brasil, 26 deles no Rio</h2>
           </div>
         </div>
         <div className="text-card-map">
@@ -85,11 +85,11 @@ const MapComponent = ({ setChartType }) => {
             </h2>
           </div>
         </div>
-        <div className="text-card-map">
+        {/* <div className="text-card-map">
           <div className="box">
             <h2>12 dos eventos de alto nível têm lugar na cidade maravilhosa - incluindo o mais importante deles, a Cúpula dos Líderes.</h2>
           </div>
-        </div>
+        </div> */}
         <div className="text-card-map">
           {/* 12 */}
         </div>

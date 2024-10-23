@@ -2,9 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Content1.css';
 import MapComponent from './MapComponent';
 import SvgMap from './SvgMap';
-import map_rio from '../assets/map_rio.png';
-import mapa1 from '../assets/mapa1.png';
-import mapa2 from '../assets/mapa2.png';
 import * as d3 from 'd3';
 
 const Content1 = ({ id }) => {
@@ -73,7 +70,7 @@ const Content1 = ({ id }) => {
             ref={imgRef1}
             className="special-image"
             style={{ opacity: 0 }} // Start with opacity 0
-            src={map_rio}
+            src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/img1.png"
             alt="mapa1"
           />
         )}
@@ -82,11 +79,11 @@ const Content1 = ({ id }) => {
             ref={imgRef2}
             className="special-image2"
             style={{ opacity: 0 }} // Start with opacity 0
-            src={mapa1}
+            src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/img2.png"
             alt="mapa2"
           />
         )}
-        {chartType === 'mapRio2' && (
+        {/* {chartType === 'mapRio2' && (
           <img
             ref={imgRef3}
             className="special-image3"
@@ -94,7 +91,7 @@ const Content1 = ({ id }) => {
             src={map_rio}
             alt="mapa3"
           />
-        )}
+        )} */}
       </div>
     </>
   );

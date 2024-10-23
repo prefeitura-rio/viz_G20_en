@@ -158,7 +158,7 @@ const Eventos = (props) => {
       <div className="text-section">
         <div className="text-card-eventos" ref={(el) => (textRefs.current[0] = el)}>
           <div className="box-eventos">
-            <h2>O G20 no Rio: O Rio de Janeiro tem um longo histórico de sediar grandes eventos internacionais, como a Conferência das Nações Unidas sobre o Meio Ambiente e o Desenvolvimento em 1992 (Eco-92), a Conferência Rio+20 em 2012 e os Jogos Olímpicos de 2016 (confira outros eventos mundiais na cidade aqui nesse dataviz interativo).
+            <h2>O Rio de Janeiro tem um longo histórico de sediar grandes eventos internacionais, como a Conferência das Nações Unidas sobre o Meio Ambiente e o Desenvolvimento em 1992 (Eco-92), a Conferência Rio+20 em 2012 e os Jogos Olímpicos de 2016 (confira outros eventos mundiais na cidade aqui nesse dataviz interativo).
             </h2>
           </div>
         </div>
@@ -201,7 +201,7 @@ const Eventos = (props) => {
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[8] = el)}>
           <div className="box-eventos">
-            <h2>Cúpula do G20 no Rio de Janeiro: A Cúpula representa a conclusão dos trabalhos conduzidos pelo país que ocupa a presidência rotativa do grupo. É o momento em que chefes de Estado e de Governo aprovam os acordos negociados ao longo do ano, e apontam caminhos para lidar com os desafios globais.</h2>
+            <h2>A Cúpula representa a conclusão dos trabalhos conduzidos pelo país que ocupa a presidência rotativa do grupo. É o momento em que chefes de Estado e de Governo aprovam os acordos negociados ao longo do ano, e apontam caminhos para lidar com os desafios globais.</h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[9] = el)}>

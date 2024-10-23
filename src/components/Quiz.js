@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Quiz.css"; // Import CSS for styling
-
+import x from "../assets/x.svg";
+import check from "../assets/check.svg";
 const Quiz = () => {
   // Sample quiz data
   const quizData = [
@@ -161,10 +162,10 @@ const Quiz = () => {
                   >
                     <span className="option-text">{option.text}</span>
                     {isAnswered[questionIndex] && selectedOptions[questionIndex] === optionIndex && !option.isCorrect && (
-                      <span className="feedback-icon">❌</span>
+                      <span className="feedback-icon"><img src={x} alt="x"></img></span>
                     )}
                     {isAnswered[questionIndex] && option.isCorrect && (
-                      <span className="feedback-icon correct-icon">✔️</span>
+                      <span className="feedback-icon correct-icon"><img src={check} alt="check"></img></span>
                     )}
                   </button>
                 ))}
