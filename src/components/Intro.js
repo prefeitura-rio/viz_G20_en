@@ -99,6 +99,7 @@ const Intro = (props) => {
             className="background-video"
             src={src}
             loop
+            playsInline
             muted
           />
         ))}

@@ -335,32 +335,32 @@ const SvgMap = ({ chartType }) => {
 
     const barComercio = {
       animationDurationUpdate: 1000,
-      legend: {
-        top: isMobile() ? '50' : '10',
-        left: 'center',
-        data: [
-          'Brasil',
-          'África do Sul',
-          'Alemanha',
-          'Arabia Saudita',
-          'Argentina',
-          'Australia',
-          'Canada',
-          'China',
-          'Coreia do Sul',
-          'EUA',
-          'França',
-          'India',
-          'Indonesia',
-          'Italia',
-          'Japao',
-          'Mexico',
-          'Reino Unido',
-          'Russia',
-          'Turquia',
-          'Resto do Mundo'
-        ]
-      },
+      // legend: {
+      //   top: isMobile() ? '50' : '10',
+      //   left: 'center',
+      //   data: [
+      //     'Brasil',
+      //     'África do Sul',
+      //     'Alemanha',
+      //     'Arabia Saudita',
+      //     'Argentina',
+      //     'Australia',
+      //     'Canada',
+      //     'China',
+      //     'Coreia do Sul',
+      //     'EUA',
+      //     'França',
+      //     'India',
+      //     'Indonesia',
+      //     'Italia',
+      //     'Japao',
+      //     'Mexico',
+      //     'Reino Unido',
+      //     'Russia',
+      //     'Turquia',
+      //     'Resto do Mundo'
+      //   ]
+      // },
       series: [
         {
           id: 'population',
@@ -384,44 +384,55 @@ const SvgMap = ({ chartType }) => {
     };
 
     const barPopulacao = {
-      legend: {
-        top: isMobile() ? '50' : '10',
-        left: 'center'
-      },
+      animationDurationUpdate: 1000,
+      // legend: {
+      //   top: isMobile() ? '50' : '10',
+      //   left: 'center',
+      //   data: [
+      //     'Brasil',
+      //     'África do Sul',
+      //     'Alemanha',
+      //     'Arabia Saudita',
+      //     'Argentina',
+      //     'Australia',
+      //     'Canada',
+      //     'China',
+      //     'Coreia do Sul',
+      //     'EUA',
+      //     'França',
+      //     'India',
+      //     'Indonesia',
+      //     'Italia',
+      //     'Japao',
+      //     'Mexico',
+      //     'Reino Unido',
+      //     'Russia',
+      //     'Turquia',
+      //     'Resto do Mundo'
+      //   ]
+      // },
       series: [
         {
           id: 'population',
           universalTransition: true,
           type: 'pie',
-          radius: ['40%', '70%'],
-          avoidLabelOverlap: false,
-          itemStyle: {
-            borderRadius: 10,
-            borderColor: '#fff',
-            borderWidth: 2
-          },
-          label: {
-            show: false,
-            position: 'center'
-          },
-          emphasis: {
-            label: {
-              show: true,
-              fontSize: 30,
-              fontWeight: 'bold'
-            }
-          },
-          labelLine: {
-            show: false
-          },
+          radius: isMobile() ? '50%' : '70%',
           data: dataPopulacao.map((item) => ({
             value: item.value,
             name: item.name,
-            itemStyle: { color: item.color }
-          }))
-        }
-      ]
+            itemStyle: { color: item.color },
+          })),
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)',
+            },
+          },
+        },
+      ],
     };
+
 
     const rootPatentes = d3.hierarchy({ children: dataPatentes })
       .sum(d => d.value)

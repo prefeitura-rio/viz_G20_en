@@ -51,7 +51,7 @@ const Content1 = ({ id }) => {
               </h2>
             </span>
             <br></br>
-            <div style={{ width: "100px", border: "1px solid #949494" }}></div>
+            <div style={{ width: "100px", border: "0.5px solid #949494" }}></div>
             <br></br>
             <br></br>
             <br></br>
