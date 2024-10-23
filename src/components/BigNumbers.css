@@ -1,3 +1,4 @@
+/* Base Styles */
 .bignumbers-container {
   font-family: "Libre Baskerville", serif;
   display: grid;
@@ -5,27 +6,25 @@
   gap: 5rem;
   padding: 2rem;
   padding-top: 10vh;
-  
   margin: 0 auto;
-  
   max-height: 500px;
   max-width: 1000px;
 }
-.container2{
-  display:flex;
+
+.container2 {
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 100vh;
+  min-width: 100vw; /* Ensure it fits the viewport */
   min-height: 100vh;
-  
 }
 
 .prefix {
   display: flex;
   flex-direction: row;
-  padding-right:4rem;
-  /* justify-content: center; */
-}	
+  padding-right: 4rem;
+}
+
 .stat-item {
   text-align: center;
   border-top: 1px solid #e0e0e0;
@@ -35,7 +34,7 @@
 .stat-value {
   font-size: 4rem;
   font-weight: bold;
-  color:white;
+  color: white;
 }
 
 .stat-unit {
@@ -44,7 +43,7 @@
   font-size: 4rem;
   margin-left: 0.25rem;
   font-weight: bold;
-  color:white;
+  color: white;
 }
 
 .stat-text {
@@ -56,49 +55,41 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  
   .bignumbers-container {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
-    
+    grid-template-columns: 1fr; /* Single column */
     gap: 0rem;
+    padding: 2rem;
+    margin-top: -5rem;
+    width: 300px; /* Ensure it fits the viewport */
+    max-width: 100%; /* Remove any fixed width constraints */
   }
+  
   .stat-value {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
+  
   .stat-unit {
-    margin: auto 0;
-    padding-right: 5px;
-    font-size: 2rem;
-    margin-left: 0.25rem;
-    font-weight: bold;
+    font-size: 1.5rem;
   }
+  
   .stat-item {
-    text-align: center;
-    border-top: 1px solid #e0e0e0;
     padding: 0.5rem 0;
   }
 }
-@media (max-width: 1200px) and (min-width: 430px) {
-  .stat-value {
-    font-size: 2rem;
-  }
+
+@media (max-width: 1200px) and (min-width: 450px) {
   .bignumbers-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
     gap: 3rem;
     padding-top: 5vh;
     max-width: 500px;
   }
-  .stat-unit {
-    margin: auto 0;
-    padding-right: 5px;
+  
+  .stat-value, .stat-unit {
     font-size: 2rem;
-    margin-left: 0.25rem;
-    font-weight: bold;
   }
+  
   .stat-item {
-    text-align: center;
-    border-top: 1px solid #e0e0e0;
     padding: 0.5rem 0;
   }
-
 }
