@@ -71,50 +71,53 @@ const SvgMap = ({ chartType }) => {
     ];
 
     const dataPie = [
-      { name: 'África do Sul', value: 399, color: '#c4b5c2' },  // Dodger Blue
-      { name: 'Alemanha', value: 4308, color: '#dea768' },       // Tomato
-      { name: 'Arabia Saudita', value: 1062, color: '#e67a70' },  // Lime Green
-      { name: 'Argentina', value: 641, color: '#a4b7a1' },      // Gold
-      { name: 'Australia', value: 1707, color: '#b7dcda' },     // Blue Violet
-      { name: 'Brasil', value: 2081, color: '#859f82' },        // Forest Green
-      { name: 'Canada', value: 2089, color: '#6b7894' },        // Orange Red
-      { name: 'China', value: 19373, color: '#c3868b' },        // Crimson
-      { name: 'Coreia do Sul', value: 1721, color: '#b65141' },   // Dark Turquoise
-      { name: 'EUA', value: 26854, color: '#7999b4' },// Steel Blue
-      { name: 'França', value: 2923, color: '#edd07a' },        // Slate Blue
-      { name: 'India', value: 3736, color: '#c9835e' },         // Dark Orange
-      { name: 'Indonesia', value: 1391, color: '#a4a3bf' },     // Light Sea Green
-      { name: 'Italia', value: 2169, color: '#afa82d ' },         // Medium Violet Red
-      { name: 'Japao', value: 4409, color: '#b5636e' },         // Deep Pink
-      { name: 'Mexico', value: 1663, color: '#62949f' },        // Dark Goldenrod
-      { name: 'Reino Unido', value: 3159, color: '#efc375' },// Cornflower Blue
-      { name: 'Russia', value: 2062, color: '#9f635a' },        // Saddle Brown
-      { name: 'Turquia', value: 1029, color: '#d3b68c' },        // Medium Spring Green
-      { name: 'Uniao Africana', value: 2988, color: '#9400D3' }, // Dark Violet
-      { name: 'Uniao Europeia', value: 17818, color: '#FF69B4' },// Hot Pink
-      { name: 'Resto do Mundo', value: 19146, color: '#A9A9A9' },// Dark Gray
+      { name: 'África do Sul', value: 0.6, color: '#c4b5c2' },  // Dodger Blue
+      { name: 'Alemanha', value: 3.1, color: '#dea768' },       // Tomato
+      { name: 'Arábia Saudita', value: 1.3, color: '#e67a70' },  // Lime Green
+      { name: 'Argentina', value: 0.7, color: '#a4b7a1' },      // Gold
+      { name: 'Austrália', value: 1.0, color: '#b7dcda' },     // Blue Violet
+      { name: 'Brasil', value: 2.3, color: '#859f82' },        // Forest Green
+      { name: 'Canadá', value: 1.3, color: '#6b7894' },        // Orange Red
+      { name: 'China', value: 19.0, color: '#c3868b' },        // Crimson
+      { name: 'Coreia do Sul', value: 1.6, color: '#b65141' },   // Dark Turquoise
+      { name: 'EUA', value: 15.5, color: '#7999b4' },           // Steel Blue
+      { name: 'França', value: 2.1, color: '#edd07a' },        // Slate Blue
+      { name: 'Índia', value: 7.9, color: '#c9835e' },         // Dark Orange
+      { name: 'Indonésia', value: 2.5, color: '#a4a3bf' },     // Light Sea Green
+      { name: 'Itália', value: 1.8, color: '#afa82d ' },       // Medium Violet Red
+      { name: 'Japão', value: 3.6, color: '#b5636e' },         // Deep Pink
+      { name: 'México', value: 1.9, color: '#62949f' },        // Dark Goldenrod
+      { name: 'Reino Unido', value: 2.2, color: '#efc375' },   // Cornflower Blue
+      { name: 'Rússia', value: 2.9, color: '#9f635a' },        // Saddle Brown
+      { name: 'Turquia', value: 2.1, color: '#d3b68c' },       // Medium Spring Green
+      { name: 'União Africana', value: 4.4, color: '#9400D3' }, // Dark Violet
+      { name: 'União Europeia', value: 7.2, color: '#FF69B4' }, // Hot Pink
+      { name: 'Resto do Mundo', value: 15.2, color: '#A9A9A9' }, // Dark Gray (placeholder for the rest)
     ];
+
     const dataComercio = [
-      { name: 'África do Sul', value: 0.5, color: '#c4b5c2' },  // Dodger Blue
-      { name: 'Alemanha', value: 6.35, color: '#dea768' },       // Tomato
-      { name: 'Arabia Saudita', value: 1.15, color: '#e67a70' },  // Lime Green
-      { name: 'Argentina', value: 0.35, color: '#a4b7a1' },     // Gold
-      { name: 'Australia', value: 1.45, color: '#b7dcda' },     // Blue Violet
-      { name: 'Brasil', value: 1.2, color: '#859f82' },         // Forest Green
-      { name: 'Canada', value: 2.35, color: '#6b7894' },        // Orange Red
-      { name: 'China', value: 12.5, color: '#c3868b' },         // Crimson
-      { name: 'Coreia do Sul', value: 2.8, color: '#b65141' },    // Dark Turquoise
-      { name: 'EUA', value: 10.75, color: '#7999b4' },// Steel Blue
-      { name: 'França', value: 2.85, color: '#edd07a' },        // Slate Blue
-      { name: 'India', value: 2.3, color: '#c9835e' },          // Dark Orange
-      { name: 'Indonesia', value: 1.05, color: '#a4a3bf' },     // Light Sea Green
-      { name: 'Italia', value: 2.65, color: '#afa82d ' },         // Medium Violet Red
-      { name: 'Japao', value: 3.25, color: '#b5636e' },         // Deep Pink
-      { name: 'Mexico', value: 2.35, color: '#62949f' },        // Dark Goldenrod
-      { name: 'Reino Unido', value: 2.65, color: '#efc375' },// Cornflower Blue
-      { name: 'Russia', value: 1.5, color: '#9f635a' },         // Saddle Brown
-      { name: 'Turquia', value: 1.2, color: '#d3b68c' },         // Medium Spring Green
-      { name: 'Resto do Mundo', value: 15.8, color: '#A9A9A9' } // Dark Gray
+      { name: 'África do Sul', value: 0.5, color: '#c4b5c2' },      // Dodger Blue
+      { name: 'Alemanha', value: 6.35, color: '#dea768' },          // Tomato
+      { name: 'Arábia Saudita', value: 1.15, color: '#e67a70' },    // Lime Green
+      { name: 'Argentina', value: 0.35, color: '#a4b7a1' },         // Gold
+      { name: 'Austrália', value: 1.45, color: '#b7dcda' },         // Blue Violet
+      { name: 'Brasil', value: 1.2, color: '#859f82' },             // Forest Green
+      { name: 'Canadá', value: 2.35, color: '#6b7894' },            // Orange Red
+      { name: 'China', value: 12.5, color: '#c3868b' },             // Crimson
+      { name: 'Coreia do Sul', value: 2.8, color: '#b65141' },      // Dark Turquoise
+      { name: 'EUA', value: 10.75, color: '#7999b4' },              // Steel Blue
+      { name: 'França', value: 2.85, color: '#edd07a' },            // Slate Blue
+      { name: 'Índia', value: 2.3, color: '#c9835e' },              // Dark Orange
+      { name: 'Indonésia', value: 1.05, color: '#a4a3bf' },         // Light Sea Green
+      { name: 'Itália', value: 2.65, color: '#afa82d' },            // Medium Violet Red
+      { name: 'Japão', value: 3.25, color: '#b5636e' },             // Deep Pink
+      { name: 'México', value: 2.35, color: '#62949f' },            // Dark Goldenrod
+      { name: 'Reino Unido', value: 2.65, color: '#efc375' },       // Cornflower Blue
+      { name: 'Rússia', value: 1.5, color: '#9f635a' },             // Saddle Brown
+      { name: 'Turquia', value: 1.2, color: '#d3b68c' },            // Medium Spring Green
+      { name: 'União Europeia', value: 14.05, color: '#FF69B4' },   // Hot Pink
+      { name: 'União Africana', value: 1.75, color: '#9400D3' },    // Dark Violet
+      { name: 'Resto do Mundo', value: 25, color: '#A9A9A9' }     // Dark Gray
     ];
 
     const dataPopulacao = [
@@ -136,6 +139,8 @@ const SvgMap = ({ chartType }) => {
       { name: 'Mexico', value: 128932753, color: '#62949f' },      // Dark Goldenrod
       { name: 'Reino Unido', value: 68207114, color: '#efc375' },// Cornflower Blue
       { name: 'Russia', value: 145912025, color: '#9f635a' },      // Saddle Brown
+      { name: 'União Europeia', value: 446828, color: '#d3b68c' },      // Medium Spring Green
+      { name: 'União Africana', value: 1393676, color: '#d3b68c' },      // Medium Spring Green
       { name: 'Turquia', value: 84339067, color: '#d3b68c' },      // Medium Spring Green
       { name: 'Resto do Mundo', value: 7800000000 - (59308690 + 83166711 + 34813867 + 45195777 + 25687041 + 212559417 + 38005238 + 1444216107 + 51780579 + 331893745 + 65273511 + 1393409038 + 273523621 + 60244639 + 125836021 + 128932753 + 68207114 + 145912025 + 84339067), color: '#A9A9A9' } // Dark Gray
     ];
