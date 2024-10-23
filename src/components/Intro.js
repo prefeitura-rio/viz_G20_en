@@ -41,15 +41,40 @@ const Intro = (props) => {
             trigger: texts[index],
             start: 'top center',
             end: 'bottom center',
-            onEnter: () => video.play(),
-            onEnterBack: () => video.play(),
-            onLeave: () => video.pause(),
-            onLeaveBack: () => video.pause(),
+            onEnter: () => {
+              video.play().catch((error) => {
+                if (error.name !== 'AbortError') {
+                  console.error('Error playing video:', error);
+                }
+              });
+            },
+            onEnterBack: () => {
+              video.play().catch((error) => {
+                if (error.name !== 'AbortError') {
+                  console.error('Error playing video:', error);
+                }
+              });
+            },
+            onLeave: () => {
+              try {
+                video.pause();
+              } catch (error) {
+                console.error('Error pausing video:', error);
+              }
+            },
+            onLeaveBack: () => {
+              try {
+                video.pause();
+              } catch (error) {
+                console.error('Error pausing video:', error);
+              }
+            },
             toggleActions: 'play none none reverse',
           },
         }
       );
     });
+
   }, []);
 
   const videoSources = [

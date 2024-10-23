@@ -171,6 +171,11 @@ const SvgMap = ({ chartType }) => {
     dataPopulacao.sort((a, b) => a.value - b.value);
     dataPatentes.sort((a, b) => a.value - b.value);
 
+    function isMobile() {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      return /android|iphone|ipad|ipod|blackberry|windows phone/i.test(userAgent);
+    }
+
     const mapOption = {
       visualMap: {
         show: false,
@@ -331,7 +336,7 @@ const SvgMap = ({ chartType }) => {
     const barComercio = {
       animationDurationUpdate: 1000,
       legend: {
-        bottom: 10,
+        top: isMobile() ? '50' : '10',
         left: 'center',
         data: [
           'Brazil',
@@ -361,7 +366,7 @@ const SvgMap = ({ chartType }) => {
           id: 'population',
           universalTransition: true,
           type: 'pie',
-          radius: '70%',
+          radius: isMobile() ? '50%' : '70%',
           data: dataComercio.map((item) => ({
             value: item.value,
             name: item.name,
@@ -380,7 +385,7 @@ const SvgMap = ({ chartType }) => {
 
     const barPopulacao = {
       legend: {
-        top: '5%',
+        top: isMobile() ? '50' : '10',
         left: 'center'
       },
       series: [
@@ -402,7 +407,7 @@ const SvgMap = ({ chartType }) => {
           emphasis: {
             label: {
               show: true,
-              fontSize: 40,
+              fontSize: 30,
               fontWeight: 'bold'
             }
           },
