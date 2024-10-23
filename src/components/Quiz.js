@@ -159,12 +159,12 @@ const Quiz = () => {
                     onClick={() => handleOptionClick(questionIndex, optionIndex)}
                     disabled={isAnswered[questionIndex]}
                   >
-                    {option.text}
+                    <span className="option-text">{option.text}</span>
                     {isAnswered[questionIndex] && selectedOptions[questionIndex] === optionIndex && !option.isCorrect && (
                       <span className="feedback-icon">❌</span>
                     )}
                     {isAnswered[questionIndex] && option.isCorrect && (
-                      <span className="feedback-icon">✔️</span>
+                      <span className="feedback-icon correct-icon">✔️</span>
                     )}
                   </button>
                 ))}

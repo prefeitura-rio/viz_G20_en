@@ -1,22 +1,26 @@
 .quiz-container2 {
-  padding-top:50px;
-  margin-bottom:-20px;
-  padding-bottom:20px;
+  padding-top: 50px;
+  margin-bottom: -20px;
+  padding-bottom: 20px;
   width: 100%;
   background-color: white;
 }
+
 .quiz-container {
   max-width: 600px;
   margin: 20px auto;
-  /* border: 1px solid #ddd; */
   border-radius: 5px;
   background-color: white;
   overflow: hidden;
 }
-.g20_title{
+
+.g20_title {
   margin: 0 20px;
   max-width: 600px;
+  font-size: 0.8rem;
+  color: #717171;
 }
+
 .quiz-image {
   position: relative;
 }
@@ -39,10 +43,12 @@
 
 .quiz-question {
   margin-bottom: 20px;
+  color: #717171;
+  font-size: 0.8rem;
 }
 
 .quiz-question h3 {
-  font-size: 18px;
+  font-size: 0.8rem;
   margin-bottom: 10px;
 }
 
@@ -57,12 +63,18 @@
   padding: 10px;
   margin-bottom: 10px;
   text-align: left;
-  font-size: 16px;
+  font-size: 0.8rem;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space between text and icon */
+  align-items: center; /* Align items vertically */
   position: relative;
   transition: background-color 0.3s ease;
+  color: #717171; /* Explicitly set the text color */
+}
+
+.option-text {
+  flex-grow: 1; /* Allow text to take up remaining space */
 }
 
 .option-btn:hover {
@@ -81,15 +93,19 @@
 
 .feedback-icon {
   margin-left: 10px;
-  font-size: 18px;
+  font-size: 15px;
 }
-
+.correct-icon {
+  color: green; /* Define a cor verde para o emoji */
+}
 .quiz-explanation {
   margin-top: 20px;
   background-color: #f9f9f9;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  font-size: 0.8rem;
+  color: #717171;
 }
 
 .separator {

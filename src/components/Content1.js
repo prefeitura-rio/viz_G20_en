@@ -38,13 +38,13 @@ const Content1 = ({ id }) => {
         <div className="text-card-map-intro">
           <div className="box-map-intro">
             <span className="desenvolvido-por">
-              <h2 style={{ fontSize: "0.9rem" }}>
+              <h2 style={{ fontSize: "0.8rem" }}>
                 Desenvolvido pelo {" "}
                 <a
                   className="sem-estilo-link"
                   href="https://www.dados.rio/"
                   target="_blank"
-                  style={{ fontWeight: "bold", fontSize: "0.9rem" }}
+                  style={{ fontWeight: "bold", fontSize: "0.8rem" }}
                   rel="noreferrer">
                   {""}Escritório de Dados<br></br>
                 </a> da Prefeitura da Cidade do Rio de Janeiro
