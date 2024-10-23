@@ -42,9 +42,9 @@ const Intro = (props) => {
             start: 'top center',
             end: 'bottom center',
             onEnter: () => video.play(),
-            // onLeave: () => video.pause(),
             onEnterBack: () => video.play(),
-            // onLeaveBack: () => video.pause(),
+            onLeave: () => video.pause(),
+            onLeaveBack: () => video.pause(),
             toggleActions: 'play none none reverse',
           },
         }
@@ -98,16 +98,6 @@ const Intro = (props) => {
           <br></br>
           <br></br>
           <br></br>
-          {/* <span className="desenvolvido-por">
-            Desenvolvido pelo {" "}
-            <a
-              className="sem-estilo-link"
-              href="https://www.dados.rio/"
-              target="_blank"
-              rel="noreferrer">
-              {""}Escritório de Dados
-            </a> da Prefeitura da Cidade do Rio de Janeiro
-          </span> */}
         </div>
       </div>
     </div>
