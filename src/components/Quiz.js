@@ -18,11 +18,11 @@ const Quiz = () => {
     <div className="quiz-container">
       <div
         className="flourish-embed flourish-quiz"
-        data-src="visualisation/19837842"
+        data-src="visualisation/19939939"
       >
         <noscript>
           <img
-            src="https://public.flourish.studio/visualisation/19837842/thumbnail"
+            src="https://public.flourish.studio/visualisation/19939939/thumbnail"
             width="100%"
             alt="quiz visualization"
           />
