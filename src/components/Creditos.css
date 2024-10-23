@@ -38,3 +38,11 @@ h2 {
   filter: invert(1); /* Inverts the colors, making white black */
   width: 150px;
 }
+
+@media (max-width: 768px) {
+
+  .logo-creditos img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+  }
+}
