@@ -3925,7 +3925,7 @@
           ]
         ]
       },
-      "properties": { "name": "Brazil", "childNum": 17 }
+      "properties": { "name": "Brasil", "childNum": 17 }
     },
     {
       "geometry": {
@@ -13391,7 +13391,7 @@
           ]
         ]
       },
-      "properties": { "name": "Germany", "childNum": 4 }
+      "properties": { "name": "Alemanha", "childNum": 4 }
     },
     {
       "geometry": {
@@ -15045,7 +15045,7 @@
         ]
       },
       "properties": {
-        "name": "France",
+        "name": "França",
         "childNum": 10,
         "cp": [2.8719426, 46.8222422]
       }
@@ -15470,7 +15470,7 @@
         ]
       },
       "properties": {
-        "name": "United Kingdom",
+        "name": "Reino Unido",
         "childNum": 14,
         "cp": [-2.5830348, 54.4598409]
       }
@@ -20218,7 +20218,7 @@
           ]
         ]
       },
-      "properties": { "name": "Italy", "childNum": 6 }
+      "properties": { "name": "Italia", "childNum": 6 }
     },
     {
       "geometry": {
@@ -20731,7 +20731,7 @@
           ]
         ]
       },
-      "properties": { "name": "Japan", "childNum": 28 }
+      "properties": { "name": "Japao", "childNum": 28 }
     },
     {
       "geometry": {
@@ -21497,7 +21497,7 @@
           ]
         ]
       },
-      "properties": { "name": "South Korea", "childNum": 7 }
+      "properties": { "name": "Coreia do Sul", "childNum": 7 }
     },
     {
       "geometry": {
@@ -29945,7 +29945,7 @@
           ]
         ]
       },
-      "properties": { "name": "Saudi Arabia", "childNum": 2 }
+      "properties": { "name": "Arabia Saudita", "childNum": 2 }
     },
     {
       "geometry": {
@@ -32065,7 +32065,7 @@
           ]
         ]
       },
-      "properties": { "name": "Turkey", "childNum": 3 }
+      "properties": { "name": "Turquia", "childNum": 3 }
     },
     {
       "geometry": {
@@ -34236,7 +34236,7 @@
           ]
         ]
       },
-      "properties": { "name": "United States", "childNum": 76 }
+      "properties": { "name": "EUA", "childNum": 76 }
     },
     {
       "geometry": {
@@ -35214,7 +35214,7 @@
           ]
         ]
       },
-      "properties": { "name": "South Africa", "childNum": 2 }
+      "properties": { "name": "África do Sul", "childNum": 2 }
     },
     {
       "geometry": {
