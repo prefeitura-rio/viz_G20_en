@@ -115,6 +115,10 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+  .logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+  }
 }
 
 /* Media query for smartphones */
