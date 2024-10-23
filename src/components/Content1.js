@@ -1,12 +1,36 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Content1.css';
 import MapComponent from './MapComponent';
 import SvgMap from './SvgMap';
-import map_rio from '../assets/map_rio.png'
-import mapa1 from '../assets/mapa1.png'
-import mapa2 from '../assets/mapa2.png'
+import map_rio from '../assets/map_rio.png';
+import mapa1 from '../assets/mapa1.png';
+import mapa2 from '../assets/mapa2.png';
+import * as d3 from 'd3';
+
 const Content1 = ({ id }) => {
   const [chartType, setChartType] = useState('map'); // Default to 'map'
+  const imgRef1 = useRef(null);
+  const imgRef2 = useRef(null);
+  const imgRef3 = useRef(null);
+
+  useEffect(() => {
+    if (chartType === 'mapInfoBrazil') {
+      d3.select(imgRef1.current)
+        .transition()
+        .duration(500) // 0.5 second fade-in duration
+        .style('opacity', 1);
+    } else if (chartType === 'mapInfoBrazil2') {
+      d3.select(imgRef2.current)
+        .transition()
+        .duration(500) // 0.5 second fade-in duration
+        .style('opacity', 1);
+    } else if (chartType === 'mapRio2') {
+      d3.select(imgRef3.current)
+        .transition()
+        .duration(500) // 0.5 second fade-in duration
+        .style('opacity', 1);
+    }
+  }, [chartType]);
 
   return (
     <>
@@ -22,13 +46,11 @@ const Content1 = ({ id }) => {
                   target="_blank"
                   style={{ fontWeight: "bold", fontSize: "0.9rem" }}
                   rel="noreferrer">
-
                   {""}Escritório de Dados<br></br>
                 </a> da Prefeitura da Cidade do Rio de Janeiro
               </h2>
             </span>
             <br></br>
-
             <div style={{ width: "100px", border: "1px solid #949494" }}></div>
             <br></br>
             <br></br>
@@ -46,24 +68,33 @@ const Content1 = ({ id }) => {
         <SvgMap chartType={chartType} />
         <MapComponent setChartType={setChartType} />
 
-        {chartType === 'mapInfoBrazil' && <img
-          className="special-image"
-          style={{ opacity: chartType === 'mapInfoBrazil' ? 1 : 0 }}
-          src={map_rio}
-          alt="mapa1"
-        />}
-        {chartType === 'mapInfoBrazil2' && <img
-          className="special-image2"
-          style={{ opacity: chartType === 'mapInfoBrazil2' ? 1 : 0 }}
-          src={mapa1}
-          alt="mapa2"
-        />}
-        {chartType === 'mapRio2' && <img
-          className="special-image3"
-          style={{ opacity: chartType === 'mapRio2' ? 1 : 0 }}
-          src={map_rio}
-          alt="mapa3"
-        />}
+        {chartType === 'mapInfoBrazil' && (
+          <img
+            ref={imgRef1}
+            className="special-image"
+            style={{ opacity: 0 }} // Start with opacity 0
+            src={map_rio}
+            alt="mapa1"
+          />
+        )}
+        {chartType === 'mapInfoBrazil2' && (
+          <img
+            ref={imgRef2}
+            className="special-image2"
+            style={{ opacity: 0 }} // Start with opacity 0
+            src={mapa1}
+            alt="mapa2"
+          />
+        )}
+        {chartType === 'mapRio2' && (
+          <img
+            ref={imgRef3}
+            className="special-image3"
+            style={{ opacity: 0 }} // Start with opacity 0
+            src={map_rio}
+            alt="mapa3"
+          />
+        )}
       </div>
     </>
   );
