@@ -7,7 +7,7 @@ const Quiz = () => {
   const quizData = [
     {
       id: 1,
-      imageUrl: "https://www.example.com/image1.jpg", // Replace with actual image URL
+      imageUrl: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/quizcapa.jpg", // Replace with actual image URL
       question: "Quantos países, além da União Africana e União Europeia, fazem parte do G20?",
       options: [
         { text: "15", isCorrect: false },
@@ -44,7 +44,7 @@ const Quiz = () => {
     {
       id: 4,
       imageUrl: "https://www.example.com/image4.jpg", // Replace with actual image URL
-      question: "Qual destes não é um membro do G20?",
+      question: "Qual destes países não é um membro do G20?",
       options: [
         { text: "México", isCorrect: false },
         { text: "Colômbia", isCorrect: true },
@@ -58,8 +58,8 @@ const Quiz = () => {
       imageUrl: "https://www.example.com/image5.jpg", // Replace with actual image URL
       question: "Qual dessas foi uma pauta central para o Brasil no G20 de 2024?",
       options: [
-        { text: "Reforma da ONU", isCorrect: false },
-        { text: "Combate à fome, pobreza e desigualdade", isCorrect: true },
+        { text: "Elevação do nível do mar", isCorrect: false },
+        { text: "Combate à fome, à pobreza e às desigualdade", isCorrect: true },
         { text: "Criação de uma aliança pela paz", isCorrect: false },
         { text: "Redução das tarifas de comércio", isCorrect: false },
       ],
@@ -95,14 +95,14 @@ const Quiz = () => {
         { text: "ONU", isCorrect: true },
         { text: "FIFA", isCorrect: false },
         { text: "Cruz Vermelha", isCorrect: false },
-        { text: "NASA", isCorrect: false },
+        { text: "COI", isCorrect: false },
       ],
       explanation: "Agências da ONU participaram de debates sobre combate à fome, reforço da saúde, promoção do trabalho decente e ideias inovadoras para o futuro.",
     },
     {
       id: 9,
       imageUrl: "https://www.example.com/image5.jpg", // Replace with actual image URL
-      question: "Qual destas regiões tem mais países representados no G20?",
+      question: "Qual destes continentes tem mais países representados no G20?",
       options: [
         { text: "América do Sul", isCorrect: false },
         { text: "América do Norte", isCorrect: false },
@@ -130,14 +130,14 @@ const Quiz = () => {
   return (
     <div className="quiz-container2">
       <div className="quiz-container">
-        <div className="g20_title">Teste seu Conhecimento sobre o G20! Depois de absorver o conteúdo do dataviz, descubra o quanto você sabe sobre o G20, o papel do Brasil e os principais temas discutidos no evento.</div>
+        <div className="g20_title"><b>Teste seu Conhecimento sobre o G20!</b> Depois de absorver o conteúdo do dataviz, descubra o quanto você sabe sobre o G20, o papel do Brasil e os principais temas discutidos no evento.</div>
         <br></br>
         <br></br>
+        <div className="quiz-image">
+          <img src="https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/quizcapa.jpg" alt="Quiz" />
+        </div>
         {quizData.map((question, questionIndex) => (
           <div key={question.id} className="quiz-item">
-            <div className="quiz-image">
-              {/* {question.imageUrl && <img src={question.imageUrl} alt="Quiz" />} */}
-            </div>
             <div className="quiz-content">
               <div className="quiz-question">
                 <span>{questionIndex + 1} de {quizData.length}</span>
