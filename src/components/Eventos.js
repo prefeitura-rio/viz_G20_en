@@ -33,11 +33,9 @@ const Eventos = (props) => {
       '',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/card26.png',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/fotocupula.png',
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/card28.png',
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/card29a.png',
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/card29b.png',
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/card30a.png',
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/card30b.png',
+      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/card28_r01.png',
+      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/card29_r01.png',
+      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/card30_r01.png',
     ];
 
     const mobileImages = [
@@ -55,11 +53,9 @@ const Eventos = (props) => {
       '',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/card26_mobile.png',
       'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/fotocupula.png',
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/card28_mobile.png',
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/card29a_mobile.png',
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/card29b_mobile.png',
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/card30a_mobile.png',
-      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/card30b_mobile.png',
+      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/card28_mobile_r01.png',
+      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/card29_mobile_r01.png',
+      'https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/scrollytelling/scrollytelling-mobile/card30_mobile_r01.png',
     ];
 
     // Function to update image sources based on screen size
@@ -175,31 +171,31 @@ const Eventos = (props) => {
       <div className="text-section">
         <div className="text-card-eventos" ref={(el) => (textRefs.current[0] = el)}>
           <div className="box-eventos">
-            <h2>O Rio de Janeiro tem um longo histórico de sediar grandes eventos internacionais, como a Conferência das Nações Unidas sobre o Meio Ambiente e o Desenvolvimento em 1992 (Eco-92), a Conferência Rio+20 em 2012 e os Jogos Olímpicos de 2016 (confira outros eventos mundiais na cidade <a href="https://prefeitura-rio.github.io/G20Dataviz/" style={{ color: "inherit" }} target="_blank"><strong>aqui</strong></a> nesse dataviz interativo).
+            <h2>O Rio de Janeiro tem um longo histórico de sediar grandes eventos internacionais, como a Conferência das Nações Unidas sobre o Meio Ambiente e o Desenvolvimento (Eco-92), a Conferência Rio+20, em 2012, e os Jogos Olímpicos de 2016  (confira outros eventos mundiais na cidade <a href="https://prefeitura-rio.github.io/G20Dataviz/" style={{ color: "inherit" }} target="_blank"><strong>aqui</strong></a> nesse dataviz interativo).
             </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[1] = el)}>
           <div className="box-eventos">
             <h2>
-              Esses eventos deram <b>experiência</b> ao Rio como destino de debates globais, e a realização do G20 em seu solo consolida essa posição de <b>relevância geopolítica</b> da cidade como <b>anfitriã do mundo</b>.
+              Esses eventos deram <b>experiência</b> ao Rio como destino de debates globais. A realização do G20 em seu solo consolida essa posição de <b>relevância geopolítica</b> da cidade como <b>anfitriã do mundo</b>.
             </h2>
           </div>
         </div>
         <div className="text-card-eventos3" ref={(el) => (textRefs.current[2] = el)}>
           <div className="box-eventos">
-            <h2>O G20 no Rio de Janeiro é <b>pioneiro</b> em muitos sentidos. O evento traz muitas novidades em relação às edições anteriores, ao dar destaque para parcelas da sociedade com pouca participação histórica no G20: <b>a sociedade civil</b> e <b>instituições não-governamentais</b> têm na cidade canais inéditos de participação, sentando à mesa para debater e contribuir junto a representantes e instituições oficiais. Ao convidar mais pessoas e organizações para a discussão, o evento <b>mobilizou a cidade</b> em uma escala significativa, transformando-a em um centro de debates globais e gerando números impressionantes:
+            <h2>O G20 no Rio de Janeiro é <b>pioneiro</b> em muitos sentidos. O evento dá destaque para parcelas da sociedade com pouca participação histórica no G20: <b>a sociedade civil</b> e <b>instituições não-governamentais</b> têm na cidade canais inéditos de participação, sentando à mesa para debater e contribuir junto a representantes e instituições oficiais. Ao convidar mais pessoas e organizações para a discussão, o evento <b>mobilizou a cidade</b> em uma escala significativa, transformando-a em um centro de debates globais e gerando números impressionantes:
             </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[3] = el)}>
           <div className="box-eventos">
-            <h2>Uma das conquistas do G20 no Rio, o G20 Social é uma realização inédita, que tem na cidade maravilhosa seu palco de estreia. O evento foi anunciado pelo presidente Lula na 18ª Cúpula de Chefes de Governo e Estado do G20, em Nova Délhi, na Índia, quando o Brasil assumiu simbolicamente a presidência do bloco. </h2>
+            <h2>Uma das conquistas do Rio, o G20 Social é uma realização inédita, que tem na cidade maravilhosa seu palco de estreia. O evento foi anunciado pelo presidente Lula na 18ª Cúpula de Chefes de Governo e Estado do G20, em Nova Délhi, na Índia, quando o Brasil assumiu simbolicamente a presidência do bloco. </h2>
           </div>
         </div>
         <div className="text-card-eventos-nobel" ref={(el) => (textRefs.current[4] = el)}>
           <div className="box-eventos">
-            <h2>O objetivo do G20 Social é ampliar a participação de atores não-governamentais nas atividades e nos processos decisórios do G20, principalmente através dos Grupos de Engajamento, além de incluir pela primeira vez encontros entre os grupos e as trilhas política (Trilha de Sherpas) e financeira (Trilha de Finanças). O ponto alto do G20 Social será a Cúpula Social, entre os dias 14 e 16 de novembro de 2024. </h2>
+            <h2>O objetivo do G20 Social é ampliar a participação de atores não-governamentais nas atividades e nos processos decisórios do G20, principalmente através dos Grupos de Engajamento. Além disso, o evento inclui pela primeira vez encontros entre os grupos e as trilhas política (Trilha de Sherpas) e financeira (Trilha de Finanças). O ponto alto do G20 Social será a Cúpula Social, entre os dias 14 e 16 de novembro de 2024. </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[5] = el)}>
@@ -210,7 +206,7 @@ const Eventos = (props) => {
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[6] = el)}>
           <div className="box-eventos">
-            <h2>Os Grupos de Engajamento são parte importante do G20 e têm participação ativa da sociedade civil. Um deles, o Urban 20 (U20), tem grande importância no cenário carioca do evento. Ele congrega as 40 maiores cidades dos países membros do G20 para articular pautas de economia, clima e desenvolvimento urbano em 76 sessões e 63 horas de programação. </h2>
+            <h2>Os Grupos de Engajamento são parte importante do G20 e têm participação ativa da sociedade civil. Um deles, o Urban 20 (U20), tem grande importância no cenário carioca do evento. Ele congrega as 40 maiores cidades dos países membros para articular pautas de economia, clima e desenvolvimento urbano em 76 sessões e 63 horas de programação. </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[7] = el)}>
@@ -269,20 +265,8 @@ const Eventos = (props) => {
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[16] = el)}>
-          <div style={{ display: "none" }} className="box-eventos">
-            <h2>
-            </h2>
-          </div>
-        </div>
-        <div className="text-card-eventos" ref={(el) => (textRefs.current[17] = el)}>
           <div className="box-eventos">
-            <h2>A escolha do MAM para o encontro possibilitou à Prefeitura do Rio realizar uma revitalização de mais de 100 mil m². Com um investimento de R$32 milhões, as obras contaram com reformas nas áreas internas do museu e a revitalização do entorno, incluindo a recomposição do paisagismo de Burle Marx. O projeto contemplou a modernização do Bloco de Exposições, a renovação do Bloco Escola, a instalação de nova iluminação nas áreas externas, a criação de um passeio público e a valorização dos Jardins do MAM. Após o G20, o MAM reabrirá ao público, com novos espaços de lazer, educação e arte, além de uma programação renovada.
-            </h2>
-          </div>
-        </div>
-        <div className="text-card-eventos" ref={(el) => (textRefs.current[18] = el)}>
-          <div style={{ display: "none" }} className="box-eventos">
-            <h2>
+            <h2>A escolha do MAM para o encontro possibilitou à Prefeitura do Rio realizar uma revitalização de mais de 100 mil m². Com um investimento de R$32 milhões, as obras contaram com reformas nas áreas internas do museu e a revitalização do entorno, incluindo a recomposição do paisagismo de Burle Marx. O projeto contemplou a modernização do Bloco de Exposições, a renovação do Bloco Escola, a instalação de nova iluminação nas áreas externas, a criação de um passeio público e a valorização dos Jardins do MAM. Após o G20, o MAM reabrirá ao público, com novos espaços de lazer, educação e arte, além de uma programação renovada.  Assim, o G20 entrega um legado físico ao Rio, que se soma ao amplo legado intelectual proporcionado pelo evento.
             </h2>
           </div>
         </div>

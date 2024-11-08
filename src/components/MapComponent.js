@@ -18,8 +18,8 @@ const MapComponent = ({ setChartType }) => {
       { trigger: '.text-card-map-especial:nth-child(8) .box', chartType: 'mapBrazil', leaveBack: 'mapBrazil' },
       { trigger: '.text-card-map-especial:nth-child(9) .box', chartType: 'mapInfoBrazil', leaveBack: 'mapInfoBrazil' },
       { trigger: '.text-card-map:nth-child(10) .box', chartType: 'mapInfoBrazil2', leaveBack: 'mapInfoBrazil2' },
-      // { trigger: '.text-card-map:nth-child(11) .box', chartType: 'mapRio2', leaveBack: 'mapRio2' },
-      { trigger: '.text-card-map:nth-child(11)', chartType: 'mapRio', leaveBack: 'mapRio' },
+      { trigger: '.text-card-map:nth-child(11) .box', chartType: 'mapInfoBrazil2', leaveBack: 'mapInfoBrazil2' },
+      { trigger: '.text-card-map:nth-child(12)', chartType: 'mapRio', leaveBack: 'mapRio' },
     ];
 
     triggers.forEach(({ trigger, chartType, leaveBack }) => {
@@ -43,7 +43,7 @@ const MapComponent = ({ setChartType }) => {
         </div>
         <div className="text-card-map">
           <div className="box">
-            <h2>A participação de um país no G20 não é determinada por votação ou eleição, mas por sua <b>relevância econômica e geopolítica global</b>. Isso torna o G20 um grupo de alto impacto em discussões globais sobre economia, comércio e outros temas importantes. Os países do G20 concentram:
+            <h2>A participação de um país no G20 não é determinada por votação ou eleição, mas por sua <b>relevância econômica e geopolítica mundial</b>. Isso torna o G20 um grupo de alto impacto em discussões globais sobre economia, comércio e outros temas importantes. Os países do G20 concentram:
             </h2>
           </div>
         </div>
@@ -72,7 +72,7 @@ const MapComponent = ({ setChartType }) => {
         </div>
         <div className="text-card-map-especial">
           <div className="box">
-            <h2>O Brasil, presente no G20 desde a primeira reunião, se posicionou como uma <b>voz chave na defesa dos países emergentes.</b> A posição, aliada a uma economia em crescimento, fortaleceu sua imagem internacional. Sua participação vai além de simplesmente ocupar um assento; o Brasil busca moldar as decisões globais, especialmente em áreas como desenvolvimento sustentável, justiça social e mudanças climáticas. </h2>
+            <h2>O Brasil, presente no G20 desde a primeira reunião, se posicionou como uma <b>voz chave na defesa dos países emergentes.</b> A postura, aliada a uma economia em crescimento, fortaleceu sua imagem internacional. Sua participação vai além de simplesmente ocupar um assento; o Brasil busca moldar as decisões globais, especialmente em áreas como desenvolvimento sustentável, justiça social e mudanças climáticas. </h2>
           </div>
         </div>
         <div className="text-card-map-especial">
