@@ -156,6 +156,7 @@ const Eventos = (props) => {
             className="background-image"
             src={src}
             alt={`Imagem ${index + 1}`}
+            style={{ display: index === 13 ? 'none' : 'block' }}
           />
         ))}
       </div>
