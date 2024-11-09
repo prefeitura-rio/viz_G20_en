@@ -108,18 +108,18 @@ const Intro = (props) => {
       {/* Scrolling text cards */}
       <div className="text-section">
         <div className="text-card-intro" ref={(el) => (textRefs.current[0] = el)}>
-          <h2>Quem decide o futuro do mundo?</h2>
+          <h2>Como e onde se pensa o futuro do mundo?</h2>
         </div>
         <div className="text-card-intro" ref={(el) => (textRefs.current[1] = el)}>
-          <h2>As escolhas feitas pelos líderes globais hoje moldarão a face da Terra nas próximas décadas.  </h2>
+          <h2>As escolhas feitas pelos líderes globais hoje moldarão a face da Terra nas próximas décadas. E quais conselhos eles ouvem?  </h2>
         </div>
         <div className="text-card-intro" ref={(el) => (textRefs.current[2] = el)}>
-          <h2>Em 2024, o Rio de Janeiro é a sede de um dos maiores encontros entre nações: a Cúpula do G20.  </h2>
+          <h2>Em 2024, o Rio de Janeiro é a sede de um dos maiores encontros entre nações: o G20, onde as maiores potências do globo pensam o futuro junto à sociedade civil.     </h2>
         </div>
         <div className="text-card-intro3" ref={(el) => (textRefs.current[3] = el)}>
           <div>
-            <h1>G20 EM DADOS</h1>
-            <h2>Veja como o evento dá destaque geopolítico ao Rio, envolve a cidade e impacta sua economia</h2>
+            <h1>G20 em Dados</h1>
+            <h2>veja como o evento dá destaque geopolítico ao Rio, envolve a cidade e impacta sua imagem no mundo</h2>
           </div>
           <br></br>
           <br></br>

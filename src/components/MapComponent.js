@@ -18,8 +18,8 @@ const MapComponent = ({ setChartType }) => {
       { trigger: '.text-card-map-especial:nth-child(8) .box', chartType: 'mapBrazil', leaveBack: 'mapBrazil' },
       { trigger: '.text-card-map-especial:nth-child(9) .box', chartType: 'mapInfoBrazil', leaveBack: 'mapInfoBrazil' },
       { trigger: '.text-card-map:nth-child(10) .box', chartType: 'mapInfoBrazil2', leaveBack: 'mapInfoBrazil2' },
-      // { trigger: '.text-card-map:nth-child(11) .box', chartType: 'mapRio2', leaveBack: 'mapRio2' },
-      { trigger: '.text-card-map:nth-child(11)', chartType: 'mapRio', leaveBack: 'mapRio' },
+      { trigger: '.text-card-map:nth-child(11) .box', chartType: 'mapInfoBrazil2', leaveBack: 'mapInfoBrazil2' },
+      { trigger: '.text-card-map:nth-child(12)', chartType: 'mapRio', leaveBack: 'mapRio' },
     ];
 
     triggers.forEach(({ trigger, chartType, leaveBack }) => {
@@ -37,12 +37,13 @@ const MapComponent = ({ setChartType }) => {
       <div className="text-section-map">
         <div className="text-card-map">
           <div className="box">
-            <h2>O G20 é composto por 19 países, mais a União Europeia e a União Africana. Você sabe dizer quais são os países membros do grupo? </h2>
+            <h2>O G20 é composto por 19 países, mais a União Europeia e a União Africana. Você sabe <b>quais são os países </b>membros do grupo?
+            </h2>
           </div>
         </div>
         <div className="text-card-map">
           <div className="box">
-            <h2>A participação de um país no G20 não é determinada por votação ou eleição, mas por sua relevância econômica e geopolítica global. Isso torna o G20 um grupo de alto impacto em discussões globais sobre economia, comércio e outros temas importantes. Os países do G20 concentram:
+            <h2>A participação de um país no G20 não é determinada por votação ou eleição, mas por sua <b>relevância econômica e geopolítica mundial</b>. Isso torna o G20 um grupo de alto impacto em discussões globais sobre economia, comércio e outros temas importantes. Os países do G20 concentram:
             </h2>
           </div>
         </div>
@@ -71,25 +72,26 @@ const MapComponent = ({ setChartType }) => {
         </div>
         <div className="text-card-map-especial">
           <div className="box">
-            <h2>O Brasil, presente no G20 desde a primeira reunião, se posicionou como uma voz chave na defesa dos países emergentes. A posição, aliada a uma economia em crescimento, fortaleceu sua imagem internacional. Sua participação vai além de simplesmente ocupar um assento; o Brasil busca moldar as decisões globais, especialmente em áreas como desenvolvimento sustentável, justiça social e mudanças climáticas. </h2>
+            <h2>O Brasil, presente no G20 desde a primeira reunião, se posicionou como uma <b>voz chave na defesa dos países emergentes.</b> A postura, aliada a uma economia em crescimento, fortaleceu sua imagem internacional. Sua participação vai além de simplesmente ocupar um assento; o Brasil busca moldar as decisões globais, especialmente em áreas como desenvolvimento sustentável, justiça social e mudanças climáticas. </h2>
           </div>
         </div>
         <div className="text-card-map-especial">
           <div className="box">
-            <h2>Em 2024, sob a presidência brasileira, o G20 adota o lema “Construindo um Mundo Justo e um Planeta Sustentável” e tem três temas prioritários: transição energética, desenvolvimento sustentável justo (com ênfase no combate à fome, à pobreza e à desigualdade) e reforma das instituições multilaterais. Desde dezembro de 2023, foram programados 105 eventos oficiais por todo o Brasil, 26 deles no Rio</h2>
+            <h2> Em 2024, sob a presidência brasileira, o G20 adota o lema <b>“Construindo um Mundo Justo e um Planeta Sustentável” </b>e tem três temas prioritários: transição energética, desenvolvimento sustentável justo (com ênfase no combate à fome, à pobreza e à desigualdade) e reforma das instituições multilaterais. Desde dezembro de 2023, foram programados 105 eventos oficiais por todo o Brasil, 26 deles no Rio de Janeiro, a <b>cidade sede oficial do evento.</b>
+            </h2>
           </div>
         </div>
         <div className="text-card-map">
           <div className="box">
-            <h2>Durante o G20, foram realizados 34 eventos oficiais de alto nível, espalhados pelo país.
+            <h2>Durante o G20, foram realizados 34 eventos oficiais de alto nível em diferentes cidades do país.
             </h2>
           </div>
         </div>
-        {/* <div className="text-card-map">
+        <div className="text-card-map">
           <div className="box">
             <h2>12 dos eventos de alto nível têm lugar na cidade maravilhosa - incluindo o mais importante deles, a Cúpula dos Líderes.</h2>
           </div>
-        </div> */}
+        </div>
         <div className="text-card-map">
           {/* 12 */}
         </div>

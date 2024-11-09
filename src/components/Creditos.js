@@ -17,6 +17,21 @@ const Creditos = () => {
         </ul>
       </div>
       <div className="section">
+        <h2>Comitê Rio G20</h2>
+        <ul>
+          <br></br>
+          <li>Secretaria Municipal de Desenvolvimento Urbano e Econômico – SMDUE</li>
+        </ul>
+      </div>
+      <div className="section">
+        <h2>Fotógrafos</h2>
+        <ul>
+          <br></br>
+          <li>Fabio Motta</li>
+          <li>Raquel Camargo           </li>
+        </ul>
+      </div>
+      <div className="section">
         <h2>Agradecimentos</h2>
         <ul>
           <br></br>
