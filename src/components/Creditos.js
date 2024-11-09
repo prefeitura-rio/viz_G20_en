@@ -6,7 +6,7 @@ const Creditos = () => {
   return (
     <div className="creditos">
       <div className="section">
-        <h2>Autores</h2>
+        <h2>Authors</h2>
         <ul>
           <br></br>
           <li>Mateus Lana</li>
@@ -17,14 +17,14 @@ const Creditos = () => {
         </ul>
       </div>
       <div className="section">
-        <h2>Comitê Rio G20</h2>
+        <h2>Rio G20 Committee</h2>
         <ul>
           <br></br>
-          <li>Secretaria Municipal de Desenvolvimento Urbano e Econômico – SMDUE</li>
+          <li>Municipal Secretariat for Urban and Economic Development – ​​SMDUE</li>
         </ul>
       </div>
       <div className="section">
-        <h2>Fotógrafos</h2>
+        <h2>Photographers</h2>
         <ul>
           <br></br>
           <li>Fabio Motta</li>
@@ -32,7 +32,7 @@ const Creditos = () => {
         </ul>
       </div>
       <div className="section">
-        <h2>Agradecimentos</h2>
+        <h2>Acknowledgements</h2>
         <ul>
           <br></br>
           <li>Lucas Padilha</li>
@@ -40,7 +40,7 @@ const Creditos = () => {
         </ul>
       </div>
       <div className="section">
-        <h2>Prefeito</h2>
+        <h2>Mayor</h2>
         <ul>
           <br></br>
           <li>Eduardo Paes</li>

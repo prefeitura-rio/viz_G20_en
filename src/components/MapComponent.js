@@ -37,34 +37,36 @@ const MapComponent = ({ setChartType }) => {
       <div className="text-section-map">
         <div className="text-card-map">
           <div className="box">
-            <h2>O G20 é composto por 19 países, mais a União Europeia e a União Africana. Você sabe <b>quais são os países </b>membros do grupo?
+            <h2>The G20 consists of 19 countries, plus the European Union and the African Union. Do you know <b>which countries are members of the group?</b>
+
             </h2>
           </div>
         </div>
         <div className="text-card-map">
           <div className="box">
-            <h2>A participação de um país no G20 não é determinada por votação ou eleição, mas por sua <b>relevância econômica e geopolítica mundial</b>. Isso torna o G20 um grupo de alto impacto em discussões globais sobre economia, comércio e outros temas importantes. Os países do G20 concentram:
+            <h2>A country’s participation in the G20 is not determined by voting or election but by its <b>global economic and geopolitical relevance.</b> This makes the G20 a high-impact group in discussions on the economy, trade, and other important issues. The G20 countries account for:
             </h2>
           </div>
         </div>
         <div className="text-card-map">
           <div className="box">
-            <h2>85% do PIB mundial</h2>
+            <h2>85% of the world’s GDP</h2>
           </div>
         </div>
         <div className="text-card-map">
           <div className="box">
-            <h2>75% do comércio global</h2>
+            <h2>75% of global trade</h2>
           </div>
         </div>
         <div className="text-card-map">
           <div className="box">
-            <h2>56% da população mundial</h2>
+            <h2>56% of the world’s population</h2>
           </div>
         </div>
         <div className="text-card-map">
           <div className="box">
-            <h2>97% das aplicações de patentes do mundo</h2>
+            <h2>97% of the world’s patent applications
+            </h2>
           </div>
         </div>
         <div className="text-card-map">
@@ -72,24 +74,26 @@ const MapComponent = ({ setChartType }) => {
         </div>
         <div className="text-card-map-especial">
           <div className="box">
-            <h2>O Brasil, presente no G20 desde a primeira reunião, se posicionou como uma <b>voz chave na defesa dos países emergentes.</b> A postura, aliada a uma economia em crescimento, fortaleceu sua imagem internacional. Sua participação vai além de simplesmente ocupar um assento; o Brasil busca moldar as decisões globais, especialmente em áreas como desenvolvimento sustentável, justiça social e mudanças climáticas. </h2>
+            <h2>Brazil, present at the G20 since the first meeting, has positioned itself as a <b>key voice in advocating for emerging countries</b>. This stance, along with a growing economy, has strengthened its international image. Brazil’s participation goes beyond merely holding a seat; it aims to shape global decisions, particularly in areas such as sustainable development, social justice, and climate change. </h2>
           </div>
         </div>
         <div className="text-card-map-especial">
           <div className="box">
-            <h2> Em 2024, sob a presidência brasileira, o G20 adota o lema <b>“Construindo um Mundo Justo e um Planeta Sustentável” </b>e tem três temas prioritários: transição energética, desenvolvimento sustentável justo (com ênfase no combate à fome, à pobreza e à desigualdade) e reforma das instituições multilaterais. Desde dezembro de 2023, foram programados 105 eventos oficiais por todo o Brasil, 26 deles no Rio de Janeiro, a <b>cidade sede oficial do evento.</b>
+            <h2> In 2024, under Brazil’s presidency, the G20 adopts the theme <b>“Building a Fair World and a Sustainable Planet”</b> and focuses on three priority areas: energy transition, fair sustainable development (emphasizing the fight against hunger, poverty, and inequality), and the reform of multilateral institutions. Since December 2023, 105 official events have been scheduled across Brazil, with 26 of them in <b>Rio, the official host city of the event.</b>
             </h2>
           </div>
         </div>
         <div className="text-card-map">
           <div className="box">
-            <h2>Durante o G20, foram realizados 34 eventos oficiais de alto nível em diferentes cidades do país.
+            <h2>During the G20, 34 high-level official events were held in different cities across the country.
+
             </h2>
           </div>
         </div>
         <div className="text-card-map">
           <div className="box">
-            <h2>12 dos eventos de alto nível têm lugar na cidade maravilhosa - incluindo o mais importante deles, a Cúpula dos Líderes.</h2>
+            <h2>12 of the high-level events take place in Rio de Janeiro – including the most important one, the Leaders' Summit.
+            </h2>
           </div>
         </div>
         <div className="text-card-map">

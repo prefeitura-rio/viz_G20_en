@@ -171,103 +171,112 @@ const Eventos = (props) => {
       <div className="text-section">
         <div className="text-card-eventos" ref={(el) => (textRefs.current[0] = el)}>
           <div className="box-eventos">
-            <h2>O Rio de Janeiro tem um longo histórico de sediar grandes eventos internacionais, como a Conferência das Nações Unidas sobre o Meio Ambiente e o Desenvolvimento (Eco-92), a Conferência Rio+20, em 2012, e os Jogos Olímpicos de 2016  (confira outros eventos mundiais na cidade <a href="https://prefeitura-rio.github.io/G20Dataviz/" style={{ color: "inherit" }} target="_blank"><strong>aqui</strong></a> nesse dataviz interativo).
+            <h2>Rio de Janeiro has a long history of hosting major international events, such as the United Nations Conference on Environment and Development in 1992 (Eco-92), the Rio+20 Conference in 2012, and the 2016 Olympic Games (check out other global events in the city in this interactive dataviz).
+
             </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[1] = el)}>
           <div className="box-eventos">
             <h2>
-              Esses eventos deram <b>experiência</b> ao Rio como destino de debates globais. A realização do G20 em seu solo consolida essa posição de <b>relevância geopolítica</b> da cidade como <b>anfitriã do mundo</b>.
+              These events have given Rio <b>experience</b> as a destination for global debates. Hosting the G20 on its soil solidifies the city’s <b>geopolitical relevance</b> as a <b>host for the world</b>.
+
             </h2>
           </div>
         </div>
         <div className="text-card-eventos3" ref={(el) => (textRefs.current[2] = el)}>
           <div className="box-eventos">
-            <h2>O G20 no Rio de Janeiro é <b>pioneiro</b> em muitos sentidos. O evento dá destaque para parcelas da sociedade com pouca participação histórica no G20: <b>a sociedade civil</b> e <b>instituições não-governamentais</b> têm na cidade canais inéditos de participação, sentando à mesa para debater e contribuir junto a representantes e instituições oficiais. Ao convidar mais pessoas e organizações para a discussão, o evento <b>mobilizou a cidade</b> em uma escala significativa, transformando-a em um centro de debates globais e gerando números impressionantes:
+            <h2>The G20 in Rio de Janeiro is <b>groundbreaking</b> in many ways. The event highlights segments of society with little historical participation in the G20: <b>civil society and non-governmental institutions</b> now have new channels of participation in the city, sitting at the table to discuss and contribute alongside representatives and official institutions. By inviting more people and organizations into the discussion, the event has mobilized the city on a significant scale, transforming it into a center of global debates and generating impressive numbers:
+
             </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[3] = el)}>
           <div className="box-eventos">
-            <h2>Uma das conquistas do Rio, o <b>G20 Social</b> é uma <b>realização inédita</b>, que tem na cidade maravilhosa seu palco de estreia. O evento foi anunciado pelo presidente Lula na 18ª Cúpula de Chefes de Governo e Estado do G20, em Nova Délhi, na Índia, quando o Brasil assumiu simbolicamente a presidência do bloco. </h2>
+            <h2>One of the achievements of the G20 in Rio, the <b>G20 Social</b> is a <b>groundbreaking event</b>, with Rio de Janeiro as its debut stage. The event was announced by President Lula at the 18th G20 Summit of Heads of Government and State in New Delhi, India, when Brazil symbolically took over the presidency of the bloc. </h2>
           </div>
         </div>
         <div className="text-card-eventos-nobel" ref={(el) => (textRefs.current[4] = el)}>
           <div className="box-eventos">
-            <h2>O objetivo do G20 Social é ampliar a participação de atores não-governamentais nas atividades e nos processos decisórios do G20, principalmente através dos <b>Grupos de Engajamento</b>. Além disso, o evento inclui pela primeira vez encontros entre os grupos e as trilhas política (Trilha de Sherpas) e financeira (Trilha de Finanças). O ponto alto do G20 Social será a <b>Cúpula Social</b>, entre os dias 14 e 16 de novembro de 2024. </h2>
+            <h2>The goal of the G20 Social is to increase the participation of non-governmental actors in the G20's activities and decision-making processes, primarily through the <b>Engagement Groups</b>.  Additionally, for the first time, the event includes meetings between these groups and the political (Sherpa) and financial (Finance) tracks. The highlight of the G20 Social will be the <b>Social Summit</b>, held from November 14 to 16, 2024.
+            </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[5] = el)}>
           <div className="box-eventos">
-            <h2>São esperadas cerca de <b>50 mil pessoas</b>, de todos os cantos do Brasil e do mundo, em um encontro com o povo e pelo povo, com respeito às autonomias de pauta e aos espaços autogestionados. A expectativa é que as colaborações da sociedade civil sejam analisadas e, no que couber e houver consenso, incorporadas à <b>Declaração de Líderes</b>.
+            <h2>Around <b>50,000 people</b> are expected, from all corners of Brazil and the world, in a gathering with and for the people, with respect for agenda autonomies and self-managed spaces. The expectation is that civil society’s contributions will be analyzed and, where applicable and with consensus, incorporated into the <b>Leaders’ Declaration</b>.
             </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[6] = el)}>
           <div className="box-eventos">
-            <h2>Os <b>Grupos de Engajamento</b> são parte importante do G20 e têm participação ativa da sociedade civil. Um deles, o <b>Urban 20</b> (U20), tem grande importância no cenário carioca do evento. Ele congrega as 40 maiores cidades dos países membros para articular pautas de economia, clima e desenvolvimento urbano em 76 sessões e 63 horas de programação. </h2>
+            <h2>The <b>Engagement Groups</b> are an important part of the G20 and have active participation from civil society. One of them, <b>Urban 20</b> (U20), holds significant importance in the Rio de Janeiro context of the event. It brings together the 40 largest cities of G20 member countries to discuss agendas related to the economy, climate, and urban development in 76 sessions and 63 hours of programming. </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[7] = el)}>
           <div className="box-eventos">
-            <h2>O grupo culmina com a <b>cúpula de prefeitos</b>, liderada pelo nosso, Eduardo Paes, em um encontro onde são esperados cerca de 100 prefeitos. O principal resultado será o Comunicado do U20, que será aprovado pelos prefeitos e entregue ao G20 em novembro de 2024. É o Rio dando <b>destaque para a gestão das cidades</b>, e recebendo de volta essa visibilidade através de nossa Prefeitura.</h2>
+            <h2>The group culminates with the <b>mayors' summit</b>, led by Rio's mayor, Eduardo Paes, in a meeting where around 100 mayors are expected. The main outcome will be the U20 Communiqué, which will be approved by the mayors and delivered to the G20 in November 2024. This highlights Rio’s <b>focus on city management</b>, while receiving this visibility through our city government.
+            </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[8] = el)}>
           <div className="box-eventos">
-            <h2>O <b>G20 Favelas</b> é uma iniciativa inovadora, criada pela presidência brasileira do evento e destacada pela organização carioca, que visa não apenas dar voz às questões enfrentadas pelas favelas, mas também promover <b>soluções colaborativas e inclusivas</b> para desafios globais. Ao ouvir e integrar as experiências e propostas das favelas, o G20 Favelas contribui para um <b>futuro mais sustentável e igualitário</b> para todos.</h2>
+            <h2>The <b>G20 Favelas</b> is an innovative initiative created by the Brazilian presidency of the event and highlighted by the local organization in Rio, aiming not only to give a voice to the issues faced by the favelas but also to promote <b>collaborative and inclusive solutions</b> for global challenges. By listening to and integrating the experiences and proposals from the favelas, the G20 Favelas contributes to a more <b>sustainable and equitable future</b> for all.
+            </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[9] = el)}>
           <div className="box-eventos">
-            <h2>De acordo com o Instituto Data Favela, as favelas brasileiras movimentam cerca de 202 bilhões de reais por ano, demonstrando seu <b>potencial econômico</b> e a força empreendedora e produtiva de seus moradores. Este é apenas um indício de como a inclusão das populações das favelas na construção de políticas públicas é essencial para combater a fome e a pobreza no Brasil.
+            <h2>According to the Data Favela Institute, Brazilian favelas generate about 202 billion reais annually, demonstrating their economic potential and the entrepreneurial and productive strength of their residents. This is just one indication of how the inclusion of favela populations in the development of public policies is essential to combat hunger and poverty in Brazil.
+
             </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[10] = el)}>
           <div className="box-eventos">
-            <h2>Estreando em solo carioca sob a presidência brasileira do G20, o <b>Oceans 20 </b>(O20) é outro grupo de trabalho que <b>surge oficialmente no Rio</b>. A criação do Oceans 20 é um <b>marco histórico</b> no reconhecimento do <b>papel central do oceano</b> nas agendas globais de clima, energia e meio ambiente e que, apesar de ser um ecossistema global e interconectado, é plural em suas características. O grupo tem um papel crucial em dar <b>voz à sociedade civil</b>, representada em organizações não governamentais, iniciativas privadas, povos indígenas, comunidades tradicionais e cientistas, para que as diferentes questões que permeiam o oceano possam ser debatidas.
+            <h2>Debuting in Rio de Janeiro under Brazil’s G20 presidency, the <b>Oceans 20</b> (O20) is another working group that officially takes shape in Rio. The creation of Oceans 20 is a historic milestone, recognizing the <b>ocean’s central role</b> in global agendas on climate, energy, and the environment. Although it is a global and interconnected ecosystem, it is diverse in its characteristics. The group plays a crucial role in giving voice to <b>civil society</b>, represented by non-governmental organizations, private initiatives, Indigenous peoples, traditional communities, and scientists, allowing the various issues surrounding the ocean to be debated.
 
             </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[11] = el)}>
           <div className="box-eventos">
-            <h2>Durante o G20, a cidade recebeu seis laureados com o <b>Prêmio Nobel</b>. Em eventos distintos, esses especialistas palestraram e debateram temas globais cruciais, como inovação tecnológica, acordos internacionais de paz e desenvolvimento sustentável. A presença deles reforçou a importância do evento e colocou o Rio no centro das discussões sobre o <b>futuro da humanidade</b>. Eventos e presenças como essas, junto com documentos elaborados nos encontros, são parte do <b>legado intelectual</b> do G20 para o Rio.
-
+            <h2>During the G20, the city hosted six <b>Nobel Prize laureates</b>. At different events, these experts gave talks and debated crucial global issues such as technological innovation, international peace agreements, and sustainable development. Their presence reinforced the importance of the event and placed Rio at the center of discussions about the <b>future of humanity</b>. Events and presences like these, along with documents developed at the meetings, are part of the <b>intellectual legacy</b> of the G20 for Rio.
             </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[12] = el)}>
           <div className="box-eventos">
-            <h2>Na <b>Reunião dos Chanceleres</b>, os ministros de relações exteriores dos países membros do G20 (além dos chanceleres de outros países, convidados pelo Brasil) se reuniram para discutir, entre outros assuntos, o papel do G20 frente às tensões geopolíticas atuais, bem como a efetiva <b>reforma da governança global</b>.
+            <h2>At the <b>Foreign Ministers' Meeting</b>, the foreign ministers of the G20 member countries (as well as foreign ministers from other countries invited by Brazil) gathered to discuss the role of the G20 in light of current geopolitical tensions, as well as the effective <b>reform of global governance</b>.
             </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[13] = el)}>
           <div className="box-eventos">
-            <h2><b>Cúpula do G20 no Rio de Janeiro:</b> A Cúpula representa a conclusão dos trabalhos conduzidos pelo país que ocupa a presidência rotativa do grupo. É o momento em que <b>chefes de Estado e de Governo</b> aprovam os acordos negociados ao longo do ano, e apontam caminhos para lidar com os desafios globais.
+            <h2><b>G20 Summit</b> in Rio de Janeiro: The Summit represents the culmination of the work led by the country holding the rotating presidency of the group. It is the moment when <b>heads of State and government</b> approve the agreements negotiated throughout the year and outline strategies for addressing global challenges.
+
 
             </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[14] = el)}>
           <div className="box-eventos">
-            <h2>No Brasil, a Cúpula de Líderes do G20 está agendada para os dias 18 e 19 de novembro de 2024, no Rio de Janeiro. A Cúpula terá lugar num dos símbolos da cultura carioca: o <b>Museu de Arte Moderna do Rio</b> (MAM).
+            <h2>In Brazil, the G20 Leaders' Summit is scheduled for November 18 and 19, 2024, in Rio de Janeiro. The Summit will take place at one of the symbols of Rio’s culture: the <b>Museum of Modern Art of Rio (MAM)</b>.
 
             </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[15] = el)}>
           <div className="box-eventos">
-            <h2>Em novembro de 2024, o mundo virá ao Rio. Líderes serão recebidos na icônica construção modernista, reinventada aos seus 75 anos, através de uma <b>ampla reforma.</b> Uma instituição cultural viva em um dos maiores parques urbanos do mundo representa um <b>legado inestimável do G20 para o Rio</b>.
+            <h2>In November 2024, the world will come to Rio. Leaders will be welcomed at the iconic modernist building, reinvented at 75 years old through an <b>extensive renovation</b>. A living cultural institution within one of the largest urban parks in the world represents an invaluable <b>legacy of the G20 for Rio</b>.
+
             </h2>
           </div>
         </div>
         <div className="text-card-eventos" ref={(el) => (textRefs.current[16] = el)}>
           <div className="box-eventos">
-            <h2>A escolha do MAM para o encontro possibilitou à Prefeitura do Rio realizar uma <b>revitalização de mais de 100 mil m²</b>. Com um investimento de R$32 milhões, as obras contaram com reformas nas áreas internas do museu e a revitalização do entorno, incluindo a recomposição do paisagismo de Burle Marx. O projeto contemplou a modernização do Bloco de Exposições, a <b>renovação do Bloco Escola</b>, a instalação de nova iluminação nas áreas externas, a criação de um passeio público e a valorização dos Jardins do MAM. Após o G20, o <b>MAM reabrirá ao público</b>, com novos espaços de lazer, educação e arte, além de uma programação renovada.  Assim, o G20 entrega um legado físico ao Rio, que se soma ao amplo legado intelectual proporcionado pelo evento.
+            <h2>The choice of MAM for the meeting enabled the Rio City Hall to carry out a <b>revitalization of over 100,000 m²</b>. With an investment of R$32 million, the works included renovations in the museum's internal areas and the revitalization of the surrounding environment, including the restoration of Burle Marx’s landscaping. The project covered the modernization of the Exhibition Block, the <b>renovation of the School Block</b>, the installation of new lighting in the outdoor areas, the creation of a public promenade, and the enhancement of the MAM Gardens. After the G20, <b>MAM will reopen to the public</b>, with new spaces for leisure, education, and art, along with a renewed program. In this way, the G20 leaves a <b>physical legacy</b> for Rio, adding to the extensive intellectual legacy provided by the event.
+
             </h2>
           </div>
         </div>

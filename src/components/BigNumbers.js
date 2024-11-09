@@ -3,12 +3,12 @@ import { gsap } from 'gsap';
 import './BigNumbers.css';
 
 const data = [
-  { value: 130, unit: '+', text: 'eventos (oficiais e paralelos)' },
-  { value: 120, unit: '+', text: 'mil pessoas envolvidas nos eventos' },
-  { value: 270, unit: '', text: 'ministros e vice-ministros' },
-  { value: 600, unit: 'M', text: 'milhões de potencial impacto econômico no Rio até o fim do ciclo do G20' },
-  { value: 130, unit: 'M', text: 'milhões em valor publicitário de divulgação do evento na imprensa' },
-  { value: 900, unit: '+', text: 'horas de eventos' },
+  { value: 130, unit: '+', text: ' events (official and side events)' },
+  { value: 120, unit: '+', text: 'thousand people involved in the events' },
+  { value: 270, unit: '', text: 'ministers and deputy ministers' },
+  { value: 600, unit: 'M', text: 'million in potential economic impact in Rio by the end of the G20 cycle' },
+  { value: 130, unit: 'M', text: 'million in advertising value for event media coverage' },
+  { value: 900, unit: '+', text: 'event hours' },
 ];
 
 const BigNumbers = ({ opacity }) => {

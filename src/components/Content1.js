@@ -35,27 +35,29 @@ const Content1 = ({ id }) => {
         <div className="text-card-map-intro">
           <div className="box-map-intro">
             <div className="desenvolvido-por">
-              Desenvolvido em parceria pelo {" "}
+              Developed in partnership by the {" "}
               <a
                 className="sem-estilo-link"
                 href="https://www.dados.rio/"
                 target="_blank"
                 style={{ fontWeight: "bold" }}
                 rel="noreferrer">
-                {""}Escritório de Dados<br></br>
-              </a> da Prefeitura da Cidade do Rio de Janeiro, SMDUE, e Comitê Rio G20
+                {""}Data Office<br></br>
+              </a> of the City Hall of Rio de Janeiro, SMDUE, and the G20 Rio Committee.
             </div>
             <br></br>
             <div style={{ width: "100px", border: "0.5px solid #949494" }}></div>
             <br></br>
             <br></br>
             <br></br>
-            <h2>O amanhã está em pauta hoje. O <b>G20</b> (Grupo dos Vinte) é um <b>fórum internacional</b> que reúne as <b>19 maiores economias mundiais</b>, mais a União Europeia e a recém incorporada União Africana. Criado em 1999, o grupo nasceu como uma resposta a sucessivas crises econômicas mundiais, com a missão de promover a harmonia comercial entre as potências e a estabilidade financeira global. <br></br><br></br>
-              Mas, com o tempo, o G20 passou a buscar respostas que vão além do crescimento e da segurança econômica. Hoje, ele se abre para temas urgentes que reverberam por todo o planeta: <b>mudanças climáticas, desigualdade social e governança global.</b> O que começou como um fórum de economistas, agora vê líderes discutindo também o meio ambiente e o futuro da humanidade.
+            <h2>Tomorrow’s issues are on today’s agenda. The G20 (Group of Twenty) is an <b>international forum</b> that brings together the <b>world’s 19 largest economies</b>, plus the European Union and the newly incorporated African Union. Established in 1999, the group emerged in response to successive global economic crises, with a mission to promote trade harmony among major powers and global financial stability. <br></br><br></br>
+              However, over time, the G20 has shifted its focus beyond mere economic growth and security. Today, it addresses urgent topics that resonate across the planet: <b>climate change, social inequality, and global governance</b>. What began as a forum for economists now sees leaders discussing the environment and the future of humanity as well.
               <br></br><br></br>
-              Os encontros do G20 constituem uma <b>trilha de eventos</b> que incluem diversas reuniões ao longo do ano, envolvendo ministros da economia, representantes de bancos centrais e outros setores. A participação da <b>sociedade civil </b>cresce a cada ano, através de mecanismos como os Grupos de Engajamento, o G20 Social e eventos paralelos. O evento culmina na <b>Cúpula dos Líderes</b>, com a presença de <b>chefes de Estado</b>, onde os documentos e recomendações elaboradas ao longo do ano são entregues em suas mãos.
+              G20 meetings consist of a <b>series of events</b> held throughout the year, involving finance ministers, central bank representatives, and other sectors. <b>Civil society</b> participation grows each year, through mechanisms such as Engagement Groups, the G20 Social, and side events. The event culminates in the Leaders' Summit, with <b>heads of State</b> in attendance, where documents and recommendations developed throughout the year are presented to them.
+
               <br></br><br></br>
-              No centro dessas decisões globais, o <b>Rio de Janeiro</b> é a <b>sede oficial do G20</b> em 2024. Mas o que isso significa para a cidade? Mergulhe neste dataviz e explore o evento, seus números, seu impacto e legado para o Rio.
+              At the center of these global decisions, <b>Rio de Janeiro is the official host city of the G20</b> in 2024. But what does this mean for the city? Dive into this data visualization to explore the event, its numbers, its impact, and its legacy for Rio.
+
             </h2>
           </div>
         </div>

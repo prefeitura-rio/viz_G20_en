@@ -8,108 +8,108 @@ const Quiz = () => {
     {
       id: 1,
       imageUrl: "https://storage.googleapis.com/rj-escritorio-dev-public/dataviz/G20/quizcapa.jpg", // Replace with actual image URL
-      question: "Quantos países, além da União Africana e União Europeia, fazem parte do G20?",
+      question: "How many countries, besides the African Union and the European Union, are part of the G20?",
       options: [
         { text: "15", isCorrect: false },
         { text: "19", isCorrect: true },
         { text: "20", isCorrect: false },
         { text: "21", isCorrect: false },
       ],
-      explanation: "Historicamente, o G20 são 19 países mais a União Europeia. A União Africana foi oficialmente admitida como membro permanente em 2023, na cúpula da Índia.",
+      explanation: "Historically, the G20 consists of 19 countries plus the European Union. The African Union was officially admitted as a permanent member in 2023, at the India summit.",
     },
     {
       id: 2,
       imageUrl: "https://www.example.com/image2.jpg", // Replace with actual image URL
-      question: "Qual é o principal objetivo do G20?",
+      question: "What is the main objective of the G20?",
       options: [
-        { text: "Promover a paz mundial", isCorrect: false },
-        { text: "Fortalecer alianças militares", isCorrect: false },
-        { text: "Expandir o comércio internacional", isCorrect: false },
-        { text: "Coordenar políticas econômicas globais", isCorrect: true },
+        { text: "Promote world peace", isCorrect: false },
+        { text: "Strengthen military alliances", isCorrect: false },
+        { text: "Expand international trade", isCorrect: false },
+        { text: "Coordinate global economic policies", isCorrect: true },
       ],
-      explanation: "Se, no passado, o grupo surgiu para prover respostas a crises, hoje é um espaço privilegiado para antever instabilidades e criar soluções conjuntas em áreas que variam do comércio à cultura, da tecnologia à mudança do clima.",
+      explanation: "In the past, the group emerged to provide responses to crises, today it is a privileged space to anticipate instabilities and create joint solutions in areas ranging from trade to culture, from technology to climate change.",
     },
     {
       id: 3,
       imageUrl: "https://www.example.com/image3.jpg", // Replace with actual image URL
-      question: "Qual país sediou a primeira reunião do G20?",
+      question: "Which country hosted the first G20 meeting?",
       options: [
-        { text: "Alemanha", isCorrect: true },
-        { text: "Canadá", isCorrect: false },
-        { text: "Japão", isCorrect: false },
-        { text: "Estados Unidos", isCorrect: false },
+        { text: "Germany", isCorrect: true },
+        { text: "Canada", isCorrect: false },
+        { text: "Japan", isCorrect: false },
+        { text: "United States", isCorrect: false },
       ],
-      explanation: "Berlim sediou a primeira reunião do G20 em 1999 porque a Alemanha foi um dos principais impulsionadores da criação do grupo, em conjunto com o Canadá.",
+      explanation: "Berlin hosted the first G20 meeting in 1999 because Germany was one of the main drivers of the group's creation, together with Canada.",
     },
     {
       id: 4,
       imageUrl: "https://www.example.com/image4.jpg", // Replace with actual image URL
-      question: "Qual destes países não é um membro do G20?",
+      question: "Which of these countries is not a member of the G20?",
       options: [
-        { text: "México", isCorrect: false },
-        { text: "Colômbia", isCorrect: true },
+        { text: "Mexico", isCorrect: false },
+        { text: "Colombia", isCorrect: true },
         { text: "Argentina", isCorrect: false },
-        { text: "Austrália", isCorrect: false },
+        { text: "Australia", isCorrect: false },
       ],
-      explanation: "Embora a Colômbia seja a 3ª maior economia da América do Sul, ela não é uma das 19 maiores economias do mundo em termos de tamanho de mercado e população, critérios que pesam na composição do G20.",
+      explanation: "Although Colombia is the 3rd largest economy in South America, it is not one of the 19 largest economies in the world in terms of market size and population, criteria that weigh in the composition of the G20.",
     },
     {
       id: 5,
       imageUrl: "https://www.example.com/image5.jpg", // Replace with actual image URL
-      question: "Qual dessas foi uma pauta central para o Brasil no G20 de 2024?",
+      question: "Which of these was a central agenda for Brazil at the 2024 G20?",
       options: [
-        { text: "Elevação do nível do mar", isCorrect: false },
-        { text: "Combate à fome, à pobreza e às desigualdade", isCorrect: true },
-        { text: "Criação de uma aliança pela paz", isCorrect: false },
-        { text: "Redução das tarifas de comércio", isCorrect: false },
+        { text: "Rising sea levels", isCorrect: false },
+        { text: "Combating hunger, poverty, and inequality", isCorrect: true },
+        { text: "Creating an alliance for peace", isCorrect: false },
+        { text: "Reducing trade tariffs", isCorrect: false },
       ],
-      explanation: "Os assuntos prioritários estabelecidos pelo governo brasileiro são combate à fome, pobreza e desigualdade, as três dimensões do desenvolvimento sustentável (econômica, social e ambiental) e a reforma da governança global.",
+      explanation: "The priority issues established by the Brazilian government are combating hunger, poverty, and inequality, the three dimensions of sustainable development (economic, social, and environmental), and the reform of global governance.",
     },
     {
       id: 6,
       imageUrl: "https://www.example.com/image5.jpg", // Replace with actual image URL
-      question: "O Brasil é membro fundador do G20?",
+      question: "Is Brazil a founding member of the G20?",
       options: [
-        { text: "Sim", isCorrect: true },
-        { text: "Não", isCorrect: false },
+        { text: "Yes", isCorrect: true },
+        { text: "No", isCorrect: false },
       ],
-      explanation: "Desde 1999, o país tem desempenhado um papel relevante no fórum, defendendo os interesses das economias emergentes e promovendo discussões sobre desenvolvimento sustentável e inclusão social.",
+      explanation: "Since 1999, the country has played a relevant role in the forum, defending the interests of emerging economies and promoting discussions on sustainable development and social inclusion.",
     },
     {
       id: 7,
       imageUrl: "https://www.example.com/image5.jpg", // Replace with actual image URL
-      question: "Em que ano o Brasil sediou pela primeira vez o G20?",
+      question: "In what year did Brazil host the G20 for the first time?",
       options: [
         { text: "2008", isCorrect: false },
         { text: "2014", isCorrect: false },
         { text: "2024", isCorrect: true },
         { text: "1999", isCorrect: false },
       ],
-      explanation: "Para o Brasil, a primeira liderança no G20 é uma oportunidade de reinserção internacional a partir de um fórum econômico de alto nível, no qual, tradicionalmente, o país teve contribuições ativas.",
+      explanation: "For Brazil, the first leadership in the G20 is an opportunity for international reintegration through a high-level economic forum, in which the country has traditionally had active contributions.",
     },
     {
       id: 8,
       imageUrl: "https://www.example.com/image5.jpg", // Replace with actual image URL
-      question: "Qual destas instituições internacionais é regularmente convidada para o G20?",
+      question: "Which of these international institutions is regularly invited to the G20?",
       options: [
-        { text: "ONU", isCorrect: true },
+        { text: "UN", isCorrect: true },
         { text: "FIFA", isCorrect: false },
-        { text: "Cruz Vermelha", isCorrect: false },
-        { text: "COI", isCorrect: false },
+        { text: "Red Cross", isCorrect: false },
+        { text: "IOC", isCorrect: false },
       ],
-      explanation: "Agências da ONU participaram de debates sobre combate à fome, reforço da saúde, promoção do trabalho decente e ideias inovadoras para o futuro.",
+      explanation: "UN agencies participated in debates on combating hunger, strengthening health, promoting decent work, and innovative ideas for the future.",
     },
     {
       id: 9,
       imageUrl: "https://www.example.com/image5.jpg", // Replace with actual image URL
-      question: "Qual destes continentes tem mais países representados no G20?",
+      question: "Which of these continents has the most countries represented in the G20?",
       options: [
-        { text: "América do Sul", isCorrect: false },
-        { text: "América do Norte", isCorrect: false },
-        { text: "Ásia", isCorrect: false },
-        { text: "Europa", isCorrect: true },
+        { text: "South America", isCorrect: false },
+        { text: "North America", isCorrect: false },
+        { text: "Asia", isCorrect: false },
+        { text: "Europe", isCorrect: true },
       ],
-      explanation: "Com vários países europeus, como Alemanha, França, Itália, Reino Unido, a Europa tem mais países no G20 que qualquer outra região.",
+      explanation: "With several European countries, such as Germany, France, Italy, and the United Kingdom, Europe has more countries in the G20 than any other region.",
     },
   ];
 
@@ -130,7 +130,7 @@ const Quiz = () => {
   return (
     <div className="quiz-container2">
       <div className="quiz-container">
-        <div className="g20_title"><b>Teste seu Conhecimento sobre o G20!</b> Depois de absorver o conteúdo do dataviz, descubra o quanto você sabe sobre o G20, o papel do Brasil e os principais temas discutidos no evento.</div>
+        <div className="g20_title"><b>Test Your Knowledge about the G20!</b> After absorbing the content of the dataviz, find out how much you know about the G20, Brazil's role, and the main topics discussed at the event.</div>
         <br></br>
         <br></br>
         <div className="quiz-image">
@@ -140,7 +140,7 @@ const Quiz = () => {
           <div key={question.id} className="quiz-item">
             <div className="quiz-content">
               <div className="quiz-question">
-                <span>{questionIndex + 1} de {quizData.length}</span>
+                <span>{questionIndex + 1} of {quizData.length}</span>
                 <h3>{question.question}</h3>
               </div>
               <div className="quiz-options">
