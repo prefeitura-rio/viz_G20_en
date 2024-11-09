@@ -130,7 +130,7 @@
 }
 
 /* Media query for smartphones */
-@media (max-width: 480px) {
+@media (max-width: 540px) {
   .box-eventos{
    padding: 30px;
   }
