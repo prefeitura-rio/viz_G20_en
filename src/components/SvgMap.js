@@ -121,51 +121,51 @@ const SvgMap = ({ chartType }) => {
     ];
 
     const dataPopulacao = [
-      { name: 'África do Sul', value: 59308690, color: '#c4b5c2' }, // Dodger Blue
-      { name: 'Alemanha', value: 83166711, color: '#dea768' },      // Tomato
-      { name: 'Arabia Saudita', value: 34813867, color: '#e67a70' }, // Lime Green
-      { name: 'Argentina', value: 45195777, color: '#a4b7a1' },    // Gold
-      { name: 'Australia', value: 25687041, color: '#b7dcda' },    // Blue Violet
-      { name: 'Brasil', value: 212559417, color: '#859f82' },      // Forest Green
-      { name: 'Canada', value: 38005238, color: '#6b7894' },       // Orange Red
-      { name: 'China', value: 1444216107, color: '#c3868b' },      // Crimson
-      { name: 'Coreia do Sul', value: 51780579, color: '#b65141' },  // Dark Turquoise
-      { name: 'EUA', value: 331893745, color: '#7999b4' },// Steel Blue
-      { name: 'França', value: 65273511, color: '#edd07a' },       // Slate Blue
-      { name: 'India', value: 1393409038, color: '#c9835e' },     // Dark Orange
-      { name: 'Indonesia', value: 273523621, color: '#a4a3bf' },   // Light Sea Green
-      { name: 'Italia', value: 60244639, color: '#afa82d ' },        // Medium Violet Red
-      { name: 'Japao', value: 125836021, color: '#b5636e' },       // Deep Pink
-      { name: 'Mexico', value: 128932753, color: '#62949f' },      // Dark Goldenrod
-      { name: 'Reino Unido', value: 68207114, color: '#efc375' },// Cornflower Blue
-      { name: 'Russia', value: 145912025, color: '#9f635a' },      // Saddle Brown
-      { name: 'União Europeia', value: 446828, color: '#d3b68c' },      // Medium Spring Green
-      { name: 'União Africana', value: 1393676, color: '#d3b68c' },      // Medium Spring Green
-      { name: 'Turquia', value: 84339067, color: '#d3b68c' },      // Medium Spring Green
-      { name: 'Resto do Mundo', value: 7800000000 - (59308690 + 83166711 + 34813867 + 45195777 + 25687041 + 212559417 + 38005238 + 1444216107 + 51780579 + 331893745 + 65273511 + 1393409038 + 273523621 + 60244639 + 125836021 + 128932753 + 68207114 + 145912025 + 84339067), color: '#A9A9A9' } // Dark Gray
+      { name: 'África do Sul', value: 0.8, color: '#c4b5c2' }, // Dodger Blue
+      { name: 'Alemanha', value: 1.0, color: '#dea768' },      // Tomato
+      { name: 'Arabia Saudita', value: 0.4, color: '#e67a70' }, // Lime Green
+      { name: 'Argentina', value: 0.6, color: '#a4b7a1' },    // Gold
+      { name: 'Australia', value: 0.3, color: '#b7dcda' },    // Blue Violet
+      { name: 'Brasil', value: 2.5, color: '#859f82' },      // Forest Green
+      { name: 'Canada', value: 0.5, color: '#6b7894' },       // Orange Red
+      { name: 'China', value: 17.2, color: '#c3868b' },      // Crimson
+      { name: 'Coreia do Sul', value: 0.6, color: '#b65141' },  // Dark Turquoise
+      { name: 'EUA', value: 4.1, color: '#7999b4' },// Steel Blue
+      { name: 'França', value: 0.8, color: '#edd07a' },       // Slate Blue
+      { name: 'India', value: 17.6, color: '#c9835e' },     // Dark Orange
+      { name: 'Indonesia', value: 3.4, color: '#a4a3bf' },   // Light Sea Green
+      { name: 'Italia', value: 0.7, color: '#afa82d ' },        // Medium Violet Red
+      { name: 'Japao', value: 1.5, color: '#b5636e' },       // Deep Pink
+      { name: 'Mexico', value: 1.6, color: '#62949f' },      // Dark Goldenrod
+      { name: 'Reino Unido', value: 0.8, color: '#efc375' },// Cornflower Blue
+      { name: 'Russia', value: 1.7, color: '#9f635a' },      // Saddle Brown
+      { name: 'União Europeia', value: 0, color: '#d3b68c' },      // Medium Spring Green
+      { name: 'União Africana', value: 0, color: '#d3b68c' },      // Medium Spring Green
+      { name: 'Turquia', value: 1.1, color: '#d3b68c' },      // Medium Spring Green
+      { name: 'Resto do Mundo', value: 44.2, color: '#A9A9A9' } // Dark Gray
     ];
 
     const dataPatentes = [
-      { name: 'África do Sul', value: 135180, color: '#c4b5c2' }, // Dodger Blue
-      { name: 'Alemanha', value: 23592, color: '#dea768' },      // Tomato
-      { name: 'Arabia Saudita', value: 2684, color: '#e67a70' },  // Lime Green
-      { name: 'Argentina', value: 1949, color: '#a4b7a1' },     // Gold
-      { name: 'Australia', value: 16407, color: '#b7dcda' },    // Blue Violet
-      { name: 'Brasil', value: 23546, color: '#859f82' },       // Forest Green
-      { name: 'Canada', value: 18125, color: '#6b7894' },       // Orange Red
-      { name: 'China', value: 798347, color: '#c3868b' },       // Crimson
-      { name: 'Coreia do Sul', value: 135180, color: '#b65141' }, // Dark Turquoise
-      { name: 'EUA', value: 323410, color: '#7999b4' },// Steel Blue
-      { name: 'França', value: 12421, color: '#edd07a' },       // Slate Blue
-      { name: 'India', value: 30490, color: '#c9835e' },        // Dark Orange
-      { name: 'Indonesia', value: 9970, color: '#a4a3bf' },     // Light Sea Green
-      { name: 'Italia', value: 7348, color: '#afa82d ' },          // Medium Violet Red
-      { name: 'Japao', value: 201420, color: '#b5636e' },       // Deep Pink
-      { name: 'Mexico', value: 9698, color: '#62949f' },        // Dark Goldenrod
-      { name: 'Reino Unido', value: 10578, color: '#efc375' },// Cornflower Blue
-      { name: 'Russia', value: 23315, color: '#9f635a' },       // Saddle Brown
-      { name: 'Turquia', value: 3449, color: '#d3b68c' },        // Medium Spring Green
-      { name: 'Resto do Mundo', value: 51439, color: '#A9A9A9' },// Dark Gray
+      { name: 'África do Sul', value: 135180, color: '#c4b5c2', percent: '9.18' }, // Dodger Blue
+      { name: 'Alemanha', value: 23592, color: '#dea768', percent: '1.60' },      // Tomato
+      { name: 'Arabia Saudita', value: 2684, color: '#e67a70', percent: '0.18' },  // Lime Green
+      { name: 'Argentina', value: 1949, color: '#a4b7a1', percent: '0.13' },     // Gold
+      { name: 'Australia', value: 16407, color: '#b7dcda', percent: '1.11' },    // Blue Violet
+      { name: 'Brasil', value: 23546, color: '#859f82', percent: '1.60' },       // Forest Green
+      { name: 'Canada', value: 18125, color: '#6b7894', percent: '1.23' },       // Orange Red
+      { name: 'China', value: 798347, color: '#c3868b', percent: '54.21' },       // Crimson
+      { name: 'Coreia do Sul', value: 135180, color: '#b65141', percent: '9.18' }, // Dark Turquoise
+      { name: 'EUA', value: 323410, color: '#7999b4', percent: '21.97' },// Steel Blue
+      { name: 'França', value: 12421, color: '#edd07a', percent: '0.84' },       // Slate Blue
+      { name: 'India', value: 30490, color: '#c9835e', percent: '2.07' },        // Dark Orange
+      { name: 'Indonesia', value: 9970, color: '#a4a3bf', percent: '0.68' },     // Light Sea Green
+      { name: 'Italia', value: 7348, color: '#afa82d ', percent: '0.50' },          // Medium Violet Red
+      { name: 'Japao', value: 201420, color: '#b5636e', percent: '13.68' },       // Deep Pink
+      { name: 'Mexico', value: 9698, color: '#62949f', percent: '0.66' },        // Dark Goldenrod
+      { name: 'Reino Unido', value: 10578, color: '#efc375', percent: '0.72' },// Cornflower Blue
+      { name: 'Russia', value: 23315, color: '#9f635a', percent: '1.58' },       // Saddle Brown
+      { name: 'Turquia', value: 3449, color: '#d3b68c', percent: '0.23' },        // Medium Spring Green
+      { name: 'Resto do Mundo', value: 51439, color: '#A9A9A9', percent: '3.50' },// Dark Gray
     ];
 
 
@@ -207,6 +207,7 @@ const SvgMap = ({ chartType }) => {
               label: {
                 // fontSize: 8,
                 color: '#000',
+                fontFamily: "Libre Baskerville",
               },
 
             }
@@ -253,6 +254,7 @@ const SvgMap = ({ chartType }) => {
               label: {
                 // fontSize: 8,
                 color: '#000',
+                fontFamily: "Libre Baskerville",
               },
 
             }
@@ -306,6 +308,7 @@ const SvgMap = ({ chartType }) => {
           data: bubbleData.map(item => ({
             value: [item.x, item.y, item.r], // x, y, radius
             name: item.name,
+            percent: item.value,
             color: item.color
           })),
           symbolSize: function (data) {
@@ -314,11 +317,12 @@ const SvgMap = ({ chartType }) => {
           label: {
             show: true,
             formatter: function (param) {
-              return param.data.name;
+              return param.data.name + '\n\n' + param.data.percent + '%';
             },
             position: 'inside',
             color: '#000000',
             fontSize: 10,
+            fontFamily: "Libre Baskerville",
           },
           itemStyle: {
             color: function (param) {
@@ -330,8 +334,9 @@ const SvgMap = ({ chartType }) => {
             label: {
               show: true,
               formatter: function (param) {
-                return param.data.name;
-              }
+                return param.data.name + '\n\n' + param.data.percent + '%';
+              },
+              fontSize: 14,
             }
           }
         }
@@ -340,32 +345,6 @@ const SvgMap = ({ chartType }) => {
 
     const barComercio = {
       animationDurationUpdate: 1000,
-      // legend: {
-      //   top: isMobile() ? '50' : '10',
-      //   left: 'center',
-      //   data: [
-      //     'Brasil',
-      //     'África do Sul',
-      //     'Alemanha',
-      //     'Arabia Saudita',
-      //     'Argentina',
-      //     'Australia',
-      //     'Canada',
-      //     'China',
-      //     'Coreia do Sul',
-      //     'EUA',
-      //     'França',
-      //     'India',
-      //     'Indonesia',
-      //     'Italia',
-      //     'Japao',
-      //     'Mexico',
-      //     'Reino Unido',
-      //     'Russia',
-      //     'Turquia',
-      //     'Resto do Mundo'
-      //   ]
-      // },
       series: [
         {
           id: 'population',
@@ -377,11 +356,25 @@ const SvgMap = ({ chartType }) => {
             name: item.name,
             itemStyle: { color: item.color },
           })),
+          label: {
+            formatter: function (param) {
+              return param.data.name;
+            },
+            position: 'outside',
+            fontFamily: "Libre Baskerville",
+            fontSize: 10
+          },
           emphasis: {
             itemStyle: {
               shadowBlur: 10,
               shadowOffsetX: 0,
               shadowColor: 'rgba(0, 0, 0, 0.5)',
+            },
+            label: {
+              formatter: function (param) {
+                return param.data.value + '%';
+              },
+              fontSize: 15
             },
           },
         },
@@ -427,11 +420,25 @@ const SvgMap = ({ chartType }) => {
             name: item.name,
             itemStyle: { color: item.color },
           })),
+          label: {
+            formatter: function (param) {
+              return param.data.name;
+            },
+            position: 'outside',
+            fontFamily: "Libre Baskerville",
+            fontSize: 10
+          },
           emphasis: {
             itemStyle: {
               shadowBlur: 10,
               shadowOffsetX: 0,
               shadowColor: 'rgba(0, 0, 0, 0.5)',
+            },
+            label: {
+              formatter: function (param) {
+                return param.data.value + '%';
+              },
+              fontSize: 15
             },
           },
         },
@@ -451,6 +458,7 @@ const SvgMap = ({ chartType }) => {
     const bubbleDataPatentes = rootPatentes.leaves().map(node => ({
       name: node.data.name,
       value: node.value,
+      percent: node.data.percent,
       color: node.data.color,
       x: node.x,
       y: node.y,
@@ -470,7 +478,8 @@ const SvgMap = ({ chartType }) => {
           data: bubbleDataPatentes.map(item => ({
             value: [item.x, item.y, item.r], // x, y, radius
             name: item.name,
-            color: item.color
+            color: item.color,
+            percent: item.percent,
           })),
           symbolSize: function (data) {
             return data[2] * 2.5; // Radius scaling for visibility
@@ -478,11 +487,12 @@ const SvgMap = ({ chartType }) => {
           label: {
             show: true,
             formatter: function (param) {
-              return param.data.name;
+              return param.data.name + '\n\n' + param.data.percent + '%';
             },
             position: 'inside',
             color: '#000000',
             fontSize: 10,
+            fontFamily: "Libre Baskerville",
           },
           itemStyle: {
             color: function (param) {
@@ -494,9 +504,11 @@ const SvgMap = ({ chartType }) => {
             label: {
               show: true,
               formatter: function (param) {
-                return param.data.name;
-              }
-            }
+                return param.data.name + '\n\n' + param.data.percent + '%';
+              },
+              fontSize: 14,
+            },
+
           }
         }
       ]
