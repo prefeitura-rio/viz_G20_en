@@ -2,7 +2,7 @@
   "name": "g20-dataviz",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://prefeitura-rio.github.io/viz_G20",
+  "homepage": "https://prefeitura-rio.github.io/viz_G20_en",
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
